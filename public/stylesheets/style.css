@@ -60,6 +60,7 @@ p{
     -o-background-size: cover;
     background-size: cover;
     -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
     height: 100vh;
     z-index: -1;
     overflow-x: hidden;
@@ -221,27 +222,29 @@ h1.pageTitle{
 
 
 .raceimg {
-    margin: 25px;
+    margin: 50px;
+    margin-left: 0;
     position: relative;
-    max-height: 500px;
+    height: auto%;
     width: auto;
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
+    /*-moz-box-shadow:    3px 3px 5px 6px #ccc;*/
+    /*-webkit-box-shadow: 3px 3px 5px 6px #ccc;*/
+    /*box-shadow:         3px 3px 5px 6px #ccc;*/
 }
 
-.raceTitle{
+.fullWidth {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+
+.tyriaDesc{
     text-align: center;
-    padding-top: 15px;
 }
 
-.raceText{
-    position: relative;
-    margin: 10px;
-    padding-bottom: 80px;
-    color: #C41907;
-    vertical-align: middle;
-}
+
+
 
 /****************************************
 ============  PROFFESSIONS  =============
