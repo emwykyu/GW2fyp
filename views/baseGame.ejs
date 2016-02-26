@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'
+      xmlns="http://www.w3.org/1999/html"/>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/app.css"/>
     <link rel="stylesheet" href="/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <script src="/modernizr/src/Modernizr.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
@@ -16,12 +18,12 @@
 <body>
 <div>
     <iframe id="player" width="1920" height="1080"
-            src="https://www.youtube.com/embed/Em0Sd60iI2w?start=9&controls=0&autoplay=1&showinfo=0&html5=1"
+            src="https://www.youtube.com/embed/Em0Sd60iI2w?start=9&controls=0&autoplay=0&showinfo=0&html5=1"
             frameborder="0"></iframe>
 </div>
 
 <div class="sectionTitle">
-    <h1 class="pageTitle"> The Game </h1>
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> The Game </h1>
 </div>
 
 <section class="sectionTyria features">
@@ -32,26 +34,26 @@
         </div>
 
         <div class="row">
-            <div class="columns large-3 panel">
-                <i class="ion-ios-people-outline columns small-12"></i>
+            <div class="columns medium-3 large-3 panel">
+                <i class="wow zoomIn ion-ios-people-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> Massively Multiplayer </h3>
                 <p class="featuresText">Play with people from around the world. Make friends form guilds, chat, trade and battle with thousands of others who share the same passion</p>
             </div>
 
-            <div class="columns large-3 panel">
-                <i class="ion-ios-book-outline columns small-12"></i>
-                <h3 class="featuresTitle"> progressive Storyline </h3>
+            <div class="columns medium-3 large-3 panel">
+                <i class="wow zoomIn  ion-ios-book-outline columns small-12" data-wow-duration="2s"></i>
+                <h3 class="featuresTitle"> progressive </br> Storyline </h3>
                 <p class="featuresText"> Set 247 years after the events of Guild Wars 1 and its expansions, Guild Wars 2 continues the epic tale of the fight against the feared Elder Dragons </p>
             </div>
 
-            <div class="columns large-3 panel">
-                <i class="ion-ios-world-outline columns small-12"></i>
-                <h3 class="featuresTitle"> Living World content </h3>
+            <div class="columns medium-3 large-3 panel">
+                <i class="wow zoomIn  ion-ios-world-outline columns small-12" data-wow-duration="2s"></i>
+                <h3 class="featuresTitle"> Living World </br> content </h3>
                 <p class="featuresText"> Experience the story of Guild Wars 2 with in the personal story. Experience seasonal, episodic content which will shape the world of Tyria</p>
             </div>
 
-            <div class="columns large-3 panel">
-                <i class="ion-ios-cart-outline columns small-12"></i>
+            <div class="columns medium-3 large-3 panel">
+                <i class="wow zoomIn  ion-ios-cart-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> No Subscription Fees </h3>
                 <p class="featuresText"> Buy once to play model means no subscription fees, so you only pay for the things you want, like wings and fluffy quaggan back skins! </p>
             </div>
@@ -60,7 +62,7 @@
 </section>
 
 <div class="sectionTitle">
-    <h1 class="pageTitle"> Races of Tyria </h1>
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Races of Tyria </h1>
 </div>
 
 <section class="sectionTyria">
@@ -72,17 +74,31 @@
     </div>
 
     <div class="row fullWidth">
-        <div class="race small-12 medium-2 large-2 medium-offset-1 large-offset-1 columns"><img src="/stylesheets/images/human.jpg" alt="" class="raceimg"></div>
-        <div class="race small-12 medium-2 large-2 columns"><img src="/stylesheets/images/norn.jpg" alt="" class="raceimg"></div>
-        <div class="race small-12 medium-2 large-2 columns"><img src="/stylesheets/images/charr.jpg" alt="" class="raceimg"></div>
-        <div class="race small-12 medium-2 large-2 columns"><img src="/stylesheets/images/sylvari.jpg" alt="" class="raceimg"></div>
-        <div class="race small-12 medium-2 large-2 columns end"><img src="/stylesheets/images/asura.jpg" alt="" class="raceimg"></div>
+        <div class="wow fadeInUp race small-12 medium-2 large-2 medium-offset-1 large-offset-1 columns" data-wow-duration="2s" data-wow-delay="0s" >
+            <img src="/stylesheets/images/human.jpg" alt="" class="raceimg">
+        </div>
+
+        <div class="wow fadeInUp race small-12 medium-2 large-2 columns" data-wow-duration="2s" data-wow-delay="0.1s">
+            <img src="/stylesheets/images/norn.jpg" alt="" class="raceimg">
+        </div>
+
+        <div class="wow fadeInUp race small-12 medium-2 large-2 columns" data-wow-duration="2s" data-wow-delay="0.2s">
+            <img src="/stylesheets/images/charr.jpg" alt="" class="raceimg">
+        </div>
+
+        <div class="wow fadeInUp race small-12 medium-2 large-2 columns" data-wow-duration="2s" data-wow-delay="0.3s">
+            <img src="/stylesheets/images/sylvari.jpg" alt="" class="raceimg">
+        </div>
+
+        <div class="wow fadeInUp race small-12 medium-2 large-2 columns end" data-wow-duration="2s" data-wow-delay="0.4s">
+            <img src="/stylesheets/images/asura.jpg" alt="" class="raceimg">
+        </div>
     </div>
 
 </section>
 
 <div class="sectionTitle">
-    <h1 class="pageTitle"> Professions </h1>
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Professions </h1>
 </div>
 
 <section class="sectionTyria">
@@ -94,23 +110,37 @@
     </div>
 
     <div class="row professionlogo">
+        <!--<div class="row">-->
+            <!--<div class=" large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Elementalist.png" alt=""></div>-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src=/stylesheets/images/Mesmer.png alt=""></div>-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Necro.png" alt=""></div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Engineer.png" alt=""></div>-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Ranger.png" alt=""></div>-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Thief.png" alt=""></div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Guardian.png" alt=""></div>-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Revenant.png" alt=""></div>-->
+            <!--<div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Warrior.png" alt=""></div>-->
+        <!--</div>-->
+
+
         <div class="row">
-            <div class=" large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Elementalist.png" alt=""></div>
-            <div class="large-4 medium-4 small-4 columns prof"><img src=/stylesheets/images/Mesmer.png alt=""></div>
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Necro.png" alt=""></div>
-        </div>
-        <div class="row">
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Engineer.png" alt=""></div>
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Ranger.png" alt=""></div>
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Thief.png" alt=""></div>
-        </div>
-        <div class="row">
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Guardian.png" alt=""></div>
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Revenant.png" alt=""></div>
-            <div class="large-4 medium-4 small-4 columns prof"><img src="/stylesheets/images/Warrior.png" alt=""></div>
+            <div class="row">
+                <div class="large-12 medium-12 columns panel"><img class="prof elementalist" src="/stylesheets/images/OOElementalist.png" align="left"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <div class="large-12 medium-12 columns panel"><img class="prof engineer" src="/stylesheets/images/OOEngineer.png" align="right"></div>
+                <p>Expedita harum nam possimus totam veritatis.</p>
+            </div>
         </div>
 
-        <p class="professionText"> hover over the images above to learn more about professions in the game </p>
+
+        <!--<img class="prof elementalist" src="/stylesheets/images/OOElementalist.png" align="left">-->
+        <!--<img class="prof engineer" src="/stylesheets/images/OOEngineer.png" align="right">-->
+
+
     </div>
 
 
@@ -122,18 +152,14 @@
 <script src="/jquery/dist/jquery.min.js"></script>
 <script src="/foundation-sites/dist/foundation.min.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/scroll.js"></script>
+<script src="/js/wow.js"></script>
 
 
-<script type="text/javascript">
-//    $(function(){
-//        $('').on(appear, function(){
-//            $(this).addClass(animated fadeIn);
-//        });
-//    });
-
-var player =  iframe.getElementById('player');
-player.mute();
-
+<script>
+    $(function () {
+        new WOW().init();
+    })
 </script>
 
 </body>
