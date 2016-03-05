@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <script src="/modernizr/src/Modernizr.js"></script>
+    <script src="/dlr.gw2Api/dist/gw2Api.js"></script>
+    <script src="/q/q.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 <div>
-    <iframe id="player" width="1920" height="1080"
-            src="https://www.youtube.com/embed/Em0Sd60iI2w?start=9&controls=0&autoplay=0&showinfo=0&html5=1"
-            frameborder="0"></iframe>
+<img src="stylesheets/images/gw2logo.gif">
 </div>
 
 <div class="sectionTitle">
@@ -34,25 +34,25 @@
         </div>
 
         <div class="row">
-            <div class="columns medium-3 large-3 panel">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.1s">
                 <i class="wow zoomIn ion-ios-people-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> Massively Multiplayer </h3>
                 <p class="featuresText">Play with people from around the world. Make friends form guilds, chat, trade and battle with thousands of others who share the same passion</p>
             </div>
 
-            <div class="columns medium-3 large-3 panel">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.2s">
                 <i class="wow zoomIn  ion-ios-book-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> progressive </br> Storyline </h3>
                 <p class="featuresText"> Set 247 years after the events of Guild Wars 1 and its expansions, Guild Wars 2 continues the epic tale of the fight against the feared Elder Dragons </p>
             </div>
 
-            <div class="columns medium-3 large-3 panel">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.3s">
                 <i class="wow zoomIn  ion-ios-world-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> Living World </br> content </h3>
                 <p class="featuresText"> Experience the story of Guild Wars 2 with in the personal story. Experience seasonal, episodic content which will shape the world of Tyria</p>
             </div>
 
-            <div class="columns medium-3 large-3 panel">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.4s">
                 <i class="wow zoomIn  ion-ios-cart-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> No Subscription Fees </h3>
                 <p class="featuresText"> Buy once to play model means no subscription fees, so you only pay for the things you want, like wings and fluffy quaggan back skins! </p>
@@ -245,18 +245,64 @@
                 <img class="prof" src="/stylesheets/images/OOWarrior.png" align="left">
             </div>
         </div>
+    </div>
+</section>
 
+<div class="sectionTitle">
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> API </h1>
+</div>
 
-
-
+<section class="sectionTyria">
+    <div class="row">
+        <div>
+            <h2> "Arise, my brainless, arise!" </h2>
+            <p id = "api" class="tyriaDesc"> </p><br>
+        </div>
     </div>
 
 
-    <div class="sectionTitle">
-        <h1 class="pageTitle"> END </h1>
-    </div>
+
+
+
+
+
+
+
+
+
+<script>
+    var ep = gw2Api.endpoints.characters.url,
+    params = ep.getParameters();
+
+    params.lang = 'en';     //set language
+    params.page = 1;        //set page; in this case, a page refers to a character. page = 0 means all characters
+    params.pageSize = 1;    //size of page determines how many pages (i.e. characters) show up.
+    params.token = '1DDFD5BA-D9BD-664C-83F7-5E1FEFBC016A83033E1A-885F-4D0E-B918-61746CB24BC3'; //API key
+
+    ep.get(params).then(function(response){
+        var data, headers;
+        data = response.data;
+        headers = response.headers;
+
+        document.write(JSON.stringify(data, null, 4));
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </section>
+
 <script src="/jquery/dist/jquery.min.js"></script>
 <script src="/foundation-sites/dist/foundation.min.js"></script>
 <script src="/js/app.js"></script>
@@ -276,25 +322,3 @@
 
 
 
-
-
-
-<!--<div class="row panel">-->
-<!--<div class="raceimg human large-2 medium-2 large-offset-1 columns " ><img src="css/images/human.jpg" alt=""></div>-->
-<!--<div class="raceimg norn large-2 medium-2 columns"><img src="css/images/norn.jpg" alt=""></div>-->
-<!--<div class="raceimg charr large-2 medium-2 columns"><img src="css/images/charr.jpg" alt=""></div>-->
-<!--<div class="raceimg sylvari large-2 medium-2 columns"><img src="css/images/sylvari.jpg" alt=""></div>-->
-<!--<div class="raceimg asura large-2 medium-2 columns end"><img src="css/images/asura.jpg" alt=""></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<p class="raceText">hover over the images above to learn more about the races of Tyria</p>-->
-<!--</section>-->
-
-<!--<script>-->
-<!--$('.human').hover(function(){-->
-<!--$('.raceText').text("I'm a human!");-->
-<!--}, function() {-->
-<!--$('.raceText').text("hover over the images above to learn more about the races of Tyria");-->
-<!--});-->
-
-<!--</script>-->

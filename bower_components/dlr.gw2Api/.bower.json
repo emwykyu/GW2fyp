@@ -1,0 +1,47 @@
+{
+  "name": "dlr.gw2Api",
+  "version": "0.5.0",
+  "description": "wrapper for v2 of the Guild Wars 2 API",
+  "keywords": [
+    "guild-wars-2-api",
+    "guildwars2-api"
+  ],
+  "main": [
+    "dist/gw2Api.js"
+  ],
+  "authors": [
+    "Dyana Rose <dyanarose@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "q": "^1.0.1"
+  },
+  "devDependencies": {
+    "q": "^1.0.1"
+  },
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "moduleName": "gw2Api",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist_temp",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/dyanarose/gw2Api.js",
+  "_release": "0.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.0",
+    "commit": "418fb742ceaf24be7bb483e0e129528c60d50e57"
+  },
+  "_source": "git://github.com/dyanarose/gw2Api.js.git",
+  "_target": "^0.5.0",
+  "_originalSource": "dlr.gw2Api",
+  "_direct": true
+}
