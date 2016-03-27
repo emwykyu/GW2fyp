@@ -13,6 +13,8 @@ html{
     overflow: -moz-scrollbars-none;
     overflow: scroll;
     overflow-x: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -265,6 +267,11 @@ h1.pageTitle{
     height: 20%;
     width: 20%;
     top: 50%;
+}
+
+.profText{
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 
