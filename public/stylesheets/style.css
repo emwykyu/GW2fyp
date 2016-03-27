@@ -8,11 +8,13 @@ html{
 	background-color: #fff;
     max-width: 1920px;
 	color: #60AE34;
-	font-family: 'Lato', 'Arial', sans-serif;
+	font-family: 'Raleway', 'Arial', sans-serif;
 	text-rendering: optimizeLegibility;
     overflow: -moz-scrollbars-none;
     overflow: scroll;
     overflow-x: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -28,10 +30,10 @@ html{
 ==============================  TEXT  =====================================
 ***************************************************************************/
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     margin: 0;
     color: #000;
-    font-family: Lato, Arial, sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -60,6 +62,7 @@ p{
     -o-background-size: cover;
     background-size: cover;
     -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
     height: 100vh;
     z-index: -1;
     overflow-x: hidden;
@@ -191,8 +194,6 @@ h1.pageTitle{
 }
 
 
-
-
 /****************************************
 ===============  THEGAME  ===============
 *****************************************/
@@ -221,46 +222,78 @@ h1.pageTitle{
 
 
 .raceimg {
-    margin: 25px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
     position: relative;
-    max-height: 500px;
+    height: auto;
     width: auto;
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
 }
 
-.raceTitle{
+.fullWidth {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    margin-bottom: 20px;
+}
+
+.tyriaDesc{
     text-align: center;
-    padding-top: 15px;
 }
 
-.raceText{
-    position: relative;
-    margin: 10px;
-    padding-bottom: 80px;
-    color: #C41907;
-    vertical-align: middle;
-}
+/*.race   {  background:rgba(0,0,0,.75);*/
+    /*text-align:center;*/
+    /*padding:45px 0 66px 0;*/
+    /*opacity:0;*/
+    /*-webkit-transition: opacity .25s ease;*/
+    /*-moz-transition: opacity .25s ease;}*/
+
+/*.row:hover .raceimg {*/
+    /*opacity:1;}*/
+
 
 /****************************************
 ============  PROFFESSIONS  =============
 *****************************************/
 
-.professionlogo>div img {
-    position: relative;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 30px;
+.prof{
+    margin-top: 10%;
+    margin-bottom: 10%;
     text-align: center;
-    max-height: 100px;
-    max-width: 100px;
-    height: 50%;
-    width: 50%;
 }
 
-.professionText{
-    font-size: 30px;
-    margin: 50px;
-    max-height: 200px;
+.profLogo{
+    height: 20%;
+    width: 20%;
+    top: 50%;
+}
+
+.profText{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.profDesc{
+    margin-top: 40px;
+    text-align: left;
+}
+
+.accordion-navigation{
+    overflow-y: scroll;
+    max-height: 500px;
+
+}
+
+.sectionTyria h5{
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 18px;
+    color: #881f0e;
+}
+
+.sectionTyria strong{
+    font-family: Raleway;
+    color: #330033;
 }
