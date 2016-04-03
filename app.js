@@ -1,7 +1,9 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+
+    var cookieParser = require('cookie-parser');
+    var bodyParser = require('body-parser');
+
 var exphbs = require('express-handlebars');
 var expressValidator = require('express-validator');
 var flash = require('connect-flash');
@@ -17,6 +19,7 @@ var db = mongoose.connection;
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var baseGame = require('./routes/baseGame');
+var myGW2 = require('./routes/myGW2');
 
 // Init App
 var app = express();
@@ -26,9 +29,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout:'layout'}));
 app.set('view engine', 'handlebars');
 
-// BodyParser Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+    // BodyParser and CookieParser Middleware
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(cookieParser());
 
 // Set Static Folder
@@ -77,9 +81,16 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/baseGame', baseGame);
+app.use('/myGW2', myGW2);
+
+app.get('/', function(req, res) {
+    res.render('baseGame.handlebars', { username: req.user.username, apiKey: req.user.apiKey});
+});
+
 
 // Set Port
 app.set('port', (process.env.PORT || 3000));

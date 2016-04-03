@@ -3,29 +3,26 @@
       xmlns="http://www.w3.org/1999/html"/>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Guild Wars 2 Ley Line</title>
-    <link rel="stylesheet" href="/stylesheets/app.css"/>
-    <link rel="stylesheet" href="/Ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"/>
-    <script src="/modernizr/src/Modernizr.js"></script>
-    <script src="/q/q.js"></script>
-    <script src="/dlr.gw2Api/dist/gw2Api.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-    <!--<script src="scripts/jquery.min.js"></script>
-    <script src="scripts/foundation.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/foundation/6.1.1/js/foundation.accordion.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:300, 400' rel='stylesheet' type='text/css'/>
-
-
 </head>
 <body>
+<!--<div class="off-canvas-wrapper">-->
+<!--<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>-->
+<!--<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>-->
+<!--<li class="list1"><a href="/">HOME</a></li>-->
+<!--<li class="list2"><a href="/myGW2">MyGW2</a></li>-->
+<!--<li class="list3"><a href=""></a>EXPANSION</li>-->
+<!--</div>-->
+<!--<div class="off-canvas-content" data-off-canvas-content>-->
+<!--<div class="title-bar">-->
+<!--<div class="title-bar-left">-->
+<!--<button class="menu-icon" type="button" data-open="offCanvasLeft"></button>-->
+<!--<span class="title-bar-title"></span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
 <div>
     <img src="stylesheets/images/gw2logo.gif">
 </div>
@@ -41,28 +38,28 @@
             <p class="tyriaDesc"> Immerse yourself in one of the most immersive and popular massively-multiplayer role-playing games ever!.</p>
         </div>
 
-        <div class="row">
-            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.1s">
+        <div class="row" data-equalizer>
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.1s" data-equalizer-watch>
                 <i class="wow zoomIn ion-ios-people-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> Massively Multiplayer </h3>
                 <p class="featuresText">Play with people from around the world. Make friends form guilds, chat, trade and battle with thousands of others who share the same passion</p>
             </div>
 
-            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.2s">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.2s" data-equalizer-watch>
                 <i class="wow zoomIn  ion-ios-book-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> progressive <br> Storyline </h3>
                 <p class="featuresText"> Set 247 years after the events of Guild Wars 1 and its expansions, Guild Wars 2 continues the epic tale of the fight against the feared Elder Dragons </p>
             </div>
 
-            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.3s" data-equalizer-watch>
                 <i class="wow zoomIn  ion-ios-world-outline columns small-12" data-wow-duration="2s"></i>
                 <h3 class="featuresTitle"> Living World <br> content </h3>
                 <p class="featuresText"> Experience the story of Guild Wars 2 with in the personal story. Experience seasonal, episodic content which will shape the world of Tyria</p>
             </div>
 
-            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.4s">
+            <div class="wow fadeInUp columns medium-3 large-3 panel"  data-wow-duration="1s" data-wow-delay="0.4s" data-equalizer-watch>
                 <i class="wow zoomIn  ion-ios-cart-outline columns small-12" data-wow-duration="2s"></i>
-                <h3 class="featuresTitle"> No Subscription </h3>
+                <h3 class="featuresTitle"> No Subscription <br> fees</h3>
                 <p class="featuresText"> Buy once to play model means no subscription fees, so you only pay for the things you want such as costumes, glider skins and makeover kits! </p>
             </div>
         </div>
@@ -80,29 +77,49 @@
             <p class="tyriaDesc"> Among the many races that inhabit Tyria, five in particular exist as the most influential. These are the playable races of Guild Wars 2, each with their own home region, storyline, armour and weapon sets</p><br>
         </div>
     </div>
+    <div class="row raceTabs">
+        <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Human</a></li>
+            <li class="tabs-title"><a href="#panel2">Norn</a></li>
+            <li class="tabs-title"><a href="#panel3">Charr</a></li>
+            <li class="tabs-title"><a href="#panel4">Sylvari</a></li>
+            <li class="tabs-title"><a href="#panel5">Asura</a></li>
+        </ul>
 
-    <div class="row fullWidth">
-        <div class="wow fadeInUp race small-12 medium-2 large-2 medium-offset-1 large-offset-1 columns panel" data-wow-duration="2s" data-wow-delay="0s" >
-            <img src="/stylesheets/images/human.jpg" alt="" class="raceimg">
-        </div>
+        <div class="tabs-content flipContainer" data-tabs-content="example-tabs">
 
-        <div class="wow fadeInUp race small-12 medium-2 large-2 columns panel" data-wow-duration="2s" data-wow-delay="0.1s">
-            <img src="/stylesheets/images/norn.jpg" alt="" class="raceimg">
-        </div>
 
-        <div class="wow fadeInUp race small-12 medium-2 large-2 columns panel" data-wow-duration="2s" data-wow-delay="0.2s">
-            <img src="/stylesheets/images/charr.jpg" alt="" class="raceimg">
-        </div>
+            <div class="tabs-panel is-active card" id="panel1" onclick="flip()">
+                <div class="front"><img src="/stylesheets/images/human.jpg" class="raceImg"></div>
+                <div class="back">
+                    <h3>Human <br> </h3>
 
-        <div class="wow fadeInUp race small-12 medium-2 large-2 columns panel" data-wow-duration="2s" data-wow-delay="0.3s">
-            <img src="/stylesheets/images/sylvari.jpg" alt="" class="raceimg">
-        </div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias autem consequatur dolorem ducimus expedita inventore, ipsa necessitatibus perspiciatis quidem
+                    recusandae sequi unde ut! Accusamus adipisci architecto, assumenda cumque et facilis fugiat id odio porro rerum saepe tempore, ullam voluptates.
+                </div>
+            </div>
 
-        <div class="wow fadeInUp race small-12 medium-2 large-2 columns panel end" data-wow-duration="2s" data-wow-delay="0.4s">
-            <img src="/stylesheets/images/asura.jpg" alt="" class="raceimg">
+            <div class="tabs-panel card" id="panel2" onclick="flip()">
+                <div class="front"><img src="/stylesheets/images/norn.jpg" class="raceImg"></div>
+                <div class="back">2</div>
+            </div>
+
+            <div class="tabs-panel card" id="panel3" onclick="flip()">
+                <div class="front"><img src="/stylesheets/images/charr.jpg" class="raceImg"></div>
+                <div class="back">2</div>
+            </div>
+
+            <div class="tabs-panel card" id="panel4" onclick="flip()">
+                <div class="front"><img src="/stylesheets/images/sylvari.jpg" class="raceImg"></div>
+                <div class="back">2</div>
+            </div>
+
+            <div class="tabs-panel card" id="panel5" onclick="flip()">
+                <div class="front"><img src="/stylesheets/images/asura.jpg" class="raceImg"></div>
+                <div class="back">2</div>
+            </div>
         </div>
     </div>
-
 </section>
 
 <div class="sectionTitle">
@@ -127,7 +144,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Elementalist</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Light </p></br>
@@ -181,7 +198,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Necromancer</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Light </p></br>
@@ -194,7 +211,7 @@
                                 <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
                                     <h5>Marks</h5> <p>Marks are ground-targeted spells that produce a variety of effects for allies and/or foes. A mark is placed at a location and will trigger after a foe steps on it.</p><br>
                                     <h5>Minions</h5> <p>The necromancer can summon undead minions to do their bidding and attack foes. Every minion-summoning spell has an associated sequence skill that appears after the minion has been summoned.
-                                        These additional skills range from consuming the minion to gain health to making them charge at foes to knock them over.</p><br>
+                                    These additional skills range from consuming the minion to gain health to making them charge at foes to knock them over.</p><br>
                                     <h5>Spectral</h5> <p>Spectral skills are exclusive to necromancers, involving the use of otherworldly spectral energy. All Spectral skills grant life force.</p><br>
                                     <h5>Corruption</h5> <p>Corruption skills are double-edged swords, applying conditions to both the necromancer and the target(s) when cast.</p><br>
                                 </div>
@@ -238,7 +255,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Mesmer</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Light </p></br>
@@ -301,7 +318,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Engineer</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Medium </p></br>
@@ -361,7 +378,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Ranger</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Medium </p></br>
@@ -424,7 +441,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Thief</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Medium </p></br>
@@ -479,7 +496,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Guardian</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Heavy </p></br>
@@ -538,7 +555,7 @@
                 <div class="profText">
                     <div class="row row-padding small-12">
                         <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-navigation">
+                            <li class="accordion-item is-active">
                                 <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Warrior</a>
                                 <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                     <h5>Armour type: </h5> <p>Heavy </p></br>
@@ -550,7 +567,7 @@
                                 <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
                                 <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
                                     <h5>Banners</h5> <p>banner skills produce an environmental weapon that passively, or via unique skills, benefits nearby allies.
-                                        The banner can be picked up and carried around, or it can be planted in an area, allowing the carrier to continue fighting normally.</p><br>
+                                    The banner can be picked up and carried around, or it can be planted in an area, allowing the carrier to continue fighting normally.</p><br>
                                     <h5>Stance</h5> <p>a warrior skill type that grants temporary bonuses to the user like increased adrenaline gain or defensive abilities.</p><br>
                                     <h5>Rages</h5> <p>utility skills which deal direct damage, control the tide of battle granting bonus adrenaline when used. (Berserker specialization only)</p><br>
                                 </div>
@@ -590,97 +607,31 @@
         </div>
     </div>
 </section>
+<div class="sectionTitle">
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Expansion </h1>
+</div>
 
 
 
-<!--<div class="sectionTitle">-->
-<!--<h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> API </h1>-->
-<!--</div>-->
-
-<!--<section class="sectionTyria">-->
-<!--<div class="row">-->
-<!--<div>-->
-<!--<h2> "Arise, my brainless, arise!" </h2>-->
-<!--<p id = "api" class="tyriaDesc"> </p><br>-->
-<!--</div>-->
-
-<!--<ul id="">-->
-<!--<li id="apiName"> </li>-->
-<!--<li id="apiGen"> </li>-->
-<!--<li id="apiRace"> </li>-->
-<!--<li id="apiProf"> </li>-->
-<!--<li id="apiLev"> </li>-->
-<!--<li id="apiAge"> </li>-->
-<!--<li id="apiCreate"> </li>-->
-<!--<li id="apiDeath"> </li>-->
-<!--</ul>-->
-
-<!--</div>-->
 
 
-<!--<script>-->
-<!--var ep = gw2Api.endpoints.characters.url, params = ep.getParameters();-->
-<!--params.lang = 'en';     //set language-->
-<!--params.page = 1;        //set page; in this case, a page refers to a character. page = 0 means all characters-->
-<!--params.pageSize = 1;    //size of page determines how many pages (i.e. characters) show up.-->
-<!--params.token = '1DDFD5BA-D9BD-664C-83F7-5E1FEFBC016A83033E1A-885F-4D0E-B918-61746CB24BC3'; //API key-->
-<!--ep.get(params).then(function(response){-->
-<!--var data, headers;-->
-<!--data = response.data;-->
-<!--headers = response.headers;-->
-
-<!--document.getElementById('apiName').innerHTML =-->
-<!--JSON.stringify(data, ['name'], 4);-->
-
-<!--document.getElementById('apiGen').innerHTML =--2
-<!--JSON.stringy(data, ['gender'], 4);-->
-
-<!--document.getElementById('apiRace').innerHTML =-->
-<!--JSON.stringify(data, ['race'], 4);-->
-
-<!--document.getElementById('apiProf').innerHTML =-->
-<!--JSON.stringify(data, ['profession'], 4);-->
-
-<!--document.getElementById('apiLev').innerHTML =-->
-<!--JSON.stringify(data, ['level'], 4);-->
-
-<!--document.getElementById('apiAge').innerHTML =-->
-<!--JSON.stringify(data, ['age'], 4);-->
-
-<!--document.getElementById('apiCreate').innerHTML =-->
-<!--JSON.stringify(data, ['created'], 4);-->
-
-<!--document.getElementById('apiDeath').innerHTML =-->
-<!--JSON.stringify(data, ['deaths'], 4);-->
 
 
-<!--$('apiOut').jPut({-->
-<!--ajax_url:ep,//ajax:Specifies the URL to send the request to. Default is the current page-->
-
-<!--done:function(e){-->
-<!--//on success (e will be the json data)-->
-<!--},-->
-<!--error:function(msg){-->
-<!--alert('Error Message:'+msg);    //On error-->
-<!--}-->
-<!--});-->
-
-<!--});-->
-<!--</script>-->
-<!--</section>-->
 
 <script src="/jquery/dist/jquery.min.js"></script>
 <script src="/foundation-sites/dist/foundation.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/scroll.js"></script>
 <script src="/js/wow.js"></script>
-<!--<script src="/js/jput-2.js"></script>-->
 <script>
 
     $(document).ready(function () {
         $(document).foundation();
     });
 
+    function flip() {
+        $('.card').toggleClass('flipped');
+    }
 
     $(function () {
         new WOW().init();
@@ -688,7 +639,3 @@
 </script>
 </body>
 </html>
-
-
-
-

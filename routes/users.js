@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var cookieparser = require('cookie-parser');
 
 var User = require('../models/user');
 
@@ -10,24 +11,31 @@ router.get('/register', function(req, res){
 	res.render('register');
 });
 
+router.get('/users/register', function(req, res){
+	res.render('register');
+});
+
 // Login
 router.get('/login', function(req, res){
 	res.render('login');
 });
 
+router.get('/users/login', function(req, res){
+	res.render('login');
+});
+
 // Register User
 router.post('/register', function(req, res){
-	var name = req.body.name;
-	var email = req.body.email;
+	//var name = req.body.name;
+	//var email = req.body.email;
 	var username = req.body.username;
+	var apiKey = req.body.apiKey;
 	var password = req.body.password;
 	var password2 = req.body.password2;
 
 	// Validation
-	req.checkBody('name', 'Name is required').notEmpty();
-	req.checkBody('email', 'Email is required').notEmpty();
-	req.checkBody('email', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
+	req.checkBody('apiKey', 'API key is required').notEmpty();
 	req.checkBody('password', 'Password is required').notEmpty();
 	req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
 
@@ -39,9 +47,8 @@ router.post('/register', function(req, res){
 		});
 	} else {
 		var newUser = new User({
-			name: name,
-			email:email,
 			username: username,
+			apiKey:apiKey,
 			password: password
 		});
 
@@ -50,9 +57,9 @@ router.post('/register', function(req, res){
 			console.log(user);
 		});
 
-		req.flash('success_msg', 'You are registered and can now login');
+		req.flash('success_msg', '');
 
-		res.redirect('/users/login');
+		res.redirect('/');
 	}
 });
 
@@ -94,9 +101,9 @@ router.post('/login',
 router.get('/logout', function(req, res){
 	req.logout();
 
-	req.flash('success_msg', 'You are logged out');
+	req.flash('success_msg', '');
 
-	res.redirect('/users/login');
+	res.redirect('/');
 });
 
 module.exports = router;

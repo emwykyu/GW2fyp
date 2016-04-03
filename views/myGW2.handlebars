@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+<div class="sectionTitle">
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> API </h1>
+</div>
+
+<section class="sectionTyria">
+    <div class="row">
+        <div>
+            <h2> "Arise, my brainless, arise!" </h2>
+            <p id = "api" class="tyriaDesc"> </p><br>
+        </div>
+
+        <!--<ul id="">-->
+            <!--<li id="apiName"> </li>-->
+            <!--<li id="apiGen"> </li>-->
+            <!--<li id="apiRace"> </li>-->
+            <!--<li id="apiProf"> </li>-->
+            <!--<li id="apiLev"> </li>-->
+            <!--<li id="apiAge"> </li>-->
+            <!--<li id="apiCreate"> </li>-->
+            <!--<li id="apiDeath"> </li>-->
+
+            <li id="test"></li>
+        <!--</ul>-->
+
+    </div>
+    <script>
+        var ep = gw2Api.endpoints.characters.url, params = ep.getParameters();
+        params.lang = 'en';     //set language
+        params.page = 0;        //set page; in this case, a page refers to a character. page = 0 means all characters
+        params.pageSize = 1;    //size of page determines how many pages (i.e. characters) show up.
+        params.token = '{{user.apiKey}}'; //API key
+        ep.get(params).then(function(response){
+            var data, headers;
+            data = response.data;
+            headers = response.headers;
+
+            var filterList = ['name', 'race', 'profession', 'level'];
+
+            for (var key in data[0]) {
+                if (filterList.indexOf(key) > -1) {
+                    console.log(data[0][key]);
+                }
+            }
+
+//            console.log(data);
+
+            $('apiOut').jPut({
+                ajax_url:ep,//ajax:Specifies the URL to send the request to. Default is the current page
+
+                done:function(e){
+                    //on success (e will be the json data)
+                },
+                error:function(msg){
+                    alert('Error Message:'+msg);    //On error
+                }
+            });
+
+        });
+
+        //            document.getElementById('apiName').innerHTML =
+        //                    JSON.stringify(data, ['name'], 4);
+        //
+        //            document.getElementById('apiGen').innerHTML =
+        //                    JSON.stringify(data, ['gender'], 4);
+        //
+        //            document.getElementById('apiRace').innerHTML =
+        //                    JSON.stringify(data, ['race'], 4);
+        //
+        //            document.getElementById('apiProf').innerHTML =
+        //                    JSON.stringify(data, ['profession'], 4);
+        //
+        //            document.getElementById('apiLev').innerHTML =
+        //                    JSON.stringify(data, ['level'], 4);
+        //
+        //            document.getElementById('apiAge').innerHTML =
+        //                    JSON.stringify(data, ['age'], 4);
+        //
+        //            document.getElementById('apiCreate').innerHTML =
+        //                    JSON.stringify(data, ['created'], 4);
+        //
+        //            document.getElementById('apiDeath').innerHTML =
+        //                    JSON.stringify(data, ['deaths'], 4);
+
+
+    </script>
+
+</section>
+
+</body>
+</html>
+

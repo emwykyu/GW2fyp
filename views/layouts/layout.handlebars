@@ -2,27 +2,34 @@
 <html>
 <head>
 	<title>LoginApp</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Guild Wars 2 Ley Line</title>
+    <link rel="stylesheet" href="/stylesheets/app.css"/>
+    <link rel="stylesheet" href="/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"/>
+    <script src="/modernizr/src/Modernizr.js"></script>
+    <script src="/q/q.js"></script>
+    <script src="/dlr.gw2Api/dist/gw2Api.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.1.1/js/foundation.accordion.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.0/js/foundation.reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.0/js/foundation.offcanvas.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.0/js/foundation.tabs.js"></script>
+    <script src="foundation-site/js/foundation.offcanvas.js"></script>
+    <script src="foundation-site/js/foundation.core.js"></script>
+    <script src="foundation-site/js/foundation.util.mediaQuery.js"></script>
+    <script src="foundation-site/js/foundation.util.motion.js"></script>
+    <script src="foundation-site/js/foundation.util.triggers.js"></script>
 
-    <!--<link rel="stylesheet" href="/css/bootstrap.css" />-->
-    <!--<link rel="stylesheet" href="/css/style.css" />-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300, 400' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-	<div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            {{#if user}}
-              <li role="presentation"><a href="/">Dashboard</a></li>
-              <li role="presentation"><a href="/users/logout">Logout</a></li>
-            {{else}}
-              <li role="presentation"><a href="/users/login">Login</a></li>
-              <li role="presentation"><a href="/users/register">Register</a></li>
-            {{/if}}
-          </ul>
-        </nav>
-      </div>
-
-
       <div class="">
         <div class="">
           {{#if success_msg}}
@@ -39,14 +46,38 @@
           
           {{{body}}}
         </div>
-
-        
       </div>
+      <!--<div class="off-canvas-wrapper">-->
+          <!--<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>-->
+              <!--<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>-->
 
-      <footer class="footer">
-        <p>&copy; 2015 LoginApp, Inc.</p>
-      </footer>
+              <!--</div>-->
+              <!--<div class="off-canvas-content" data-off-canvas-content>-->
+                  <!--<div class="title-bar">-->
+                      <!--<div class="title-bar-left">-->
+                          <!--<button class="menu-icon" type="button" data-open="offCanvasLeft"></button>-->
+                          <!--<span class="title-bar-title">Foundation</span>-->
+                      <!--</div>-->
+                  <!--</div>-->
+                  <!--<p>content goes here...</p>-->
+              <!--</div>-->
+          <!--</div>-->
+      <!--</div>-->
 
-    </div> <!-- /container -->
+      <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css"></script>
+      <script src="foundation-site/js/foundation.offcanvas.js"></script>
+      <script src="foundation-site/js/foundation.core.js"></script>
+      <script src="foundation-site/js/foundation.util.mediaQuery.js"></script>
+      <script src="foundation-site/js/foundation.util.motion.js"></script>
+      <script src="foundation-site/js/foundation.util.triggers.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $(document).foundation();
+        new WOW().init();
+    });
+</script>
 </body>
 </html>

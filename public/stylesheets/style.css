@@ -13,8 +13,6 @@ html{
     overflow: -moz-scrollbars-none;
     overflow: scroll;
     overflow-x: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -26,6 +24,25 @@ html{
     background: #FF0000;
 }
 
+
+
+/*media query for MEDIUM SCREEN SIZES*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    *{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/*media query for SMALL SCREEN SIZES*/
+@media screen and (max-width: 39.9375em) {
+    *{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 /**************************************************************************
 ==============================  TEXT  =====================================
 ***************************************************************************/
@@ -34,6 +51,7 @@ h1, h2, h3, h4, p {
     margin: 0;
     color: #000;
     font-family: Raleway, Arial, sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
     font-weight: 300;
 }
 
@@ -176,6 +194,50 @@ img.heroImg:empty
     vertical-align: middle;
 }
 
+.alert-danger{
+    color: #ff000b;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.reveal{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("images/regbg.jpg") no-repeat center center fixed;
+    width: 20em;
+    height: 30em;
+
+}
+
+.reveal h2{
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+div.reveal div.authForm{
+    width: 10em;
+}
+
+
+.playerbutton{
+    cursor:pointer;
+    border:none;
+    background:transparent;
+    outline:none;
+    display:inline;
+    /*position: absolute;*/
+    z-index: 100;
+    left: 50%;
+    right: 50%;
+    font-family:'Raleway', 'Arial', sans-serif;
+}
+.gaf210codes_youtubebox,.preload_box{
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    visibility:hidden;
+    position:absolute;
+    display:inline;
+}
+
 /**************************************************************************
 ============================  SECTION  ===================================
 ***************************************************************************/
@@ -192,6 +254,7 @@ h1.pageTitle{
     font-size: 80px;
     color: #C41907; /*rgba(90,52,89,1.0);*/
 }
+
 
 
 /****************************************
@@ -214,47 +277,43 @@ h1.pageTitle{
 /****************************************
 =============  RACESTYRIA  =============
 *****************************************/
+.raceTabs{
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url("images/RaceArt.jpg") no-repeat center center fixed;
+    margin-bottom: 55px;
+}
 
 .sectionTyria h2{
     padding: 30px;
     text-align: center;
 }
 
-
-.raceimg {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
-    position: relative;
-    height: auto;
-    width: auto;
-}
-
-.fullWidth {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: initial;
-    margin-bottom: 20px;
-}
-
 .tyriaDesc{
     text-align: center;
 }
 
-/*.race   {  background:rgba(0,0,0,.75);*/
-    /*text-align:center;*/
-    /*padding:45px 0 66px 0;*/
-    /*opacity:0;*/
-    /*-webkit-transition: opacity .25s ease;*/
-    /*-moz-transition: opacity .25s ease;}*/
+.tabs-content{
+    margin-bottom: 10px;
+}
 
-/*.row:hover .raceimg {*/
-    /*opacity:1;}*/
+.tabs-panel{
+    /*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("images/thornsbg.jpg") no-repeat center center fixed;*/
+    align-items: center;
+    width: 25em;
+    margin: 0 auto;
+
+}
+
+/*padding for small screens*/
+@media screen and (max-width: 39.9375em) {
+    ul.tabs a {
+        padding: 15px;
+    }
+}
+
 
 
 /****************************************
-============  PROFFESSIONS  =============
+============  PROFESSIONS  =============
 *****************************************/
 
 .prof{
@@ -297,3 +356,66 @@ h1.pageTitle{
     font-family: Raleway;
     color: #330033;
 }
+/*************************************
+============  CARD FLIP  =============
+**************************************/
+
+.flipContainer {
+    height: 40em;
+    width: 25em;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    margin: 0 auto;
+}
+.card {
+    height: 40em;
+    width: 25em;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    display: block;
+    height: 90%;
+    width: 90%;
+    /*line-height: 260px;*/
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.card .back {
+    background: #fff;
+    color: #000;
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+/*=====================================================*/
