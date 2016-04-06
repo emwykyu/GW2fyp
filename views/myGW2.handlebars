@@ -17,18 +17,16 @@
             <p id = "api" class="tyriaDesc"> </p><br>
         </div>
 
-        <!--<ul id="">-->
-            <!--<li id="apiName"> </li>-->
-            <!--<li id="apiGen"> </li>-->
-            <!--<li id="apiRace"> </li>-->
-            <!--<li id="apiProf"> </li>-->
-            <!--<li id="apiLev"> </li>-->
-            <!--<li id="apiAge"> </li>-->
-            <!--<li id="apiCreate"> </li>-->
-            <!--<li id="apiDeath"> </li>-->
-
-            <li id="test"></li>
-        <!--</ul>-->
+        <ul id="">
+            <li id="apiName"> </li>
+            <li id="apiGen"> </li>
+            <li id="apiRace"> </li>
+            <li id="apiProf"> </li>
+            <li id="apiLev"> </li>
+            <li id="apiAge"> </li>
+            <li id="apiCreate"> </li>
+            <li id="apiDeath"> </li>
+        </ul>
 
     </div>
     <script>
@@ -42,15 +40,31 @@
             data = response.data;
             headers = response.headers;
 
-            var filterList = ['name', 'race', 'profession', 'level'];
+//            var filterList = ['name', 'race', 'profession', 'level'];
+//
+//            for (var key in data[0]) {
+//                if (filterList.indexOf(key) > -1) {
+//                    console.log(data[0][key]);
+//                }
+//            }
 
-            for (var key in data[0]) {
-                if (filterList.indexOf(key) > -1) {
-                    console.log(data[0][key]);
-                }
-            }
+            document.getElementById('apiName').innerHTML = "NAME: " + data[0].name;
 
-//            console.log(data);
+            document.getElementById('apiGen').innerHTML = "GENDER: " + data[0].gender;
+
+            document.getElementById('apiRace').innerHTML = "RACE: " + data[0].race;
+
+            document.getElementById('apiProf').innerHTML = "PROFESSION: " + data[0].profession;
+
+            document.getElementById('apiLev').innerHTML = "LEVEL: " + data[0].level;
+
+            document.getElementById('apiAge').innerHTML = "AGE: " + parseInt((data[0].age/3600), 10) + " hours";
+
+            var d = new Date(data[0].created);
+            document.getElementById('apiCreate').innerHTML = "CREATED ON : " + d;
+
+            document.getElementById('apiDeath').innerHTML = "DEATHS: " + data[0].deaths;
+
 
             $('apiOut').jPut({
                 ajax_url:ep,//ajax:Specifies the URL to send the request to. Default is the current page
@@ -65,29 +79,7 @@
 
         });
 
-        //            document.getElementById('apiName').innerHTML =
-        //                    JSON.stringify(data, ['name'], 4);
-        //
-        //            document.getElementById('apiGen').innerHTML =
-        //                    JSON.stringify(data, ['gender'], 4);
-        //
-        //            document.getElementById('apiRace').innerHTML =
-        //                    JSON.stringify(data, ['race'], 4);
-        //
-        //            document.getElementById('apiProf').innerHTML =
-        //                    JSON.stringify(data, ['profession'], 4);
-        //
-        //            document.getElementById('apiLev').innerHTML =
-        //                    JSON.stringify(data, ['level'], 4);
-        //
-        //            document.getElementById('apiAge').innerHTML =
-        //                    JSON.stringify(data, ['age'], 4);
-        //
-        //            document.getElementById('apiCreate').innerHTML =
-        //                    JSON.stringify(data, ['created'], 4);
-        //
-        //            document.getElementById('apiDeath').innerHTML =
-        //                    JSON.stringify(data, ['deaths'], 4);
+
 
 
     </script>

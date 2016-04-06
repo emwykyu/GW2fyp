@@ -14,6 +14,7 @@
 
 <form method="post" action="/users/login" class="login">
     {{#if user}}
+        <p class="loggedInAs">logged in as {{user.username}}</p>
         <a href="/users/logout" class="button">Log Out</a>
         <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
         <script type="text/javascript">function toggleButtonPlayer_fhcIB(buttonobj){buttonobj.style.display="none";if(buttonobj.id=="gaf210codes-fhcIB-playbutton"){document.getElementById("gaf210codes-fhcIB-pausebutton").style.display="inline";}else{document.getElementById("gaf210codes-fhcIB-playbutton").style.display="inline";}}/*Youtube player code generated @ http://gaf210.imvustylez.net*/</script>
@@ -44,7 +45,9 @@
 <div class="home">
 </div>
 <a href="/baseGame">
-    <img src="/stylesheets/images/hotlogo.png" class="heroImg" class="columns small-12 medium-12 large-row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+    <div class="wow fade-in" data-wow-duration="1s" data-wow-delay="0s">
+    <img src="/stylesheets/images/hotlogo.png" class="heroImg" class="columns small-12 medium-12 large-row">
+    </div>
 </a>
 
 <div class="reveal" id="exampleModal1" data-reveal>
@@ -93,12 +96,13 @@
 
     $(document).ready(function () {
         $(document).foundation();
+
+        $(function () {
+            new WOW().init();
+        })
+
     });
 
-
-    $(function () {
-        new WOW().init();
-    })
 </script>
 
 
