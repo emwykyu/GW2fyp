@@ -24,8 +24,6 @@ html{
     background: #FF0000;
 }
 
-
-
 /*media query for MEDIUM SCREEN SIZES*/
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     *{
@@ -57,16 +55,19 @@ h1, h2, h3, h4, p {
 
 h2{
     font-size: 50px;
+    font-weight: 300!important;
 }
 
 h3{
     font-size: 30px;
     padding-bottom: 30px;
+    font-weight: 300!important;
 }
 
 p{
     padding-left: 15px;
     padding-right: 15px;
+    font-weight: 300!important;
 }
 
 /**************************************************************************

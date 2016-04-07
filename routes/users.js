@@ -92,18 +92,18 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-router.post('/login',
-  passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
-  function(req, res) {
-    res.redirect('/');
-  });
+	router.post('/login',
+	  passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+	  function(req, res) {
+		res.redirect('/');
+	  });
 
-router.get('/logout', function(req, res){
-	req.logout();
+	router.get('/logout', function(req, res){
+		req.logout();
 
-	req.flash('success_msg', '');
+		req.flash('success_msg', '');
 
-	res.redirect('/');
-});
+		res.redirect('/');
+	});
 
 module.exports = router;
