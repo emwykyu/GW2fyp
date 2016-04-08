@@ -215,6 +215,15 @@ p.loggedInAs{
     padding: 5px;
 }
 
+.myGW2{
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 5em;
+    position: relative;
+    bottom: 20%;
+
+}
+
 .revealS{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("images/regbg.jpg") no-repeat center center fixed;
     width: 20em;
