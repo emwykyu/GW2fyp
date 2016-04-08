@@ -582,3 +582,27 @@ h1.apiTitle{
         display: table;
     }
 }
+
+/**************************************************************************
+=============================  ERROR  =====================================
+***************************************************************************/
+
+.error {
+    position: relative;
+    background: url("https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/wallpapers/DragonBash2-1920x1080.jpg") no-repeat center center fixed;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 18%;
+}
+
+.error > h1 {
+    color: #fff;
+    font-family:Raleway, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.error > form .loginInput{
+    background: #fff;
+    color: #000;
+}
