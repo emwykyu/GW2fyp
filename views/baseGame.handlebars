@@ -5,23 +5,7 @@
 <head>
 </head>
 <body>
-<!--<div class="off-canvas-wrapper">-->
-<!--<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>-->
-<!--<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>-->
-<!--<li class="list1"><a href="/">HOME</a></li>-->
-<!--<li class="list2"><a href="/myGW2">MyGW2</a></li>-->
-<!--<li class="list3"><a href=""></a>EXPANSION</li>-->
-<!--</div>-->
-<!--<div class="off-canvas-content" data-off-canvas-content>-->
-<!--<div class="title-bar">-->
-<!--<div class="title-bar-left">-->
-<!--<button class="menu-icon" type="button" data-open="offCanvasLeft"></button>-->
-<!--<span class="title-bar-title"></span>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+
 
 <div>
     <img src="stylesheets/images/gw2logo.gif">
@@ -34,7 +18,7 @@
 <section class="sectionTyria features">
     <div class="row">
         <div class="col large-12">
-            <h2> "By Raven, there's no end to Tyria!" </h2>
+            <h2 class="secText"> "By Raven, there's no end to Tyria!" </h2>
             <p class="tyriaDesc"> Immerse yourself in one of the most immersive and popular massively-multiplayer role-playing games ever!.</p>
         </div>
 
@@ -64,6 +48,26 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="reveal revealS" id="exampleModal5" data-reveal>
+            <div class="flex-video">
+                <iframe width="420" height="315" src="https://www.youtube.com/watch?v=u7VrDhEnzFQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+
+
+
+        <div class="large-4 medium-4 small-12 columns "><a data-open="exampleModal5"><img class="thumbnail" src="/stylesheets/images/world.png" alt="Photo of Uranus.">Living World</a></div>
+        <div class="large-4 medium-4 small-12 columns "><img class="thumbnail" src="/stylesheets/images/pvp.png" alt="Photo of Uranus."> PvP</div>
+        <div class="large-4 medium-4 small-12 columns "><img class="thumbnail" src="/stylesheets/images/dunge.png" alt="Photo of Uranus."> Dungeons</div>
+    </div>
+
+
 </section>
 
 <div class="sectionTitle">
@@ -73,7 +77,7 @@
 <section class="sectionTyria">
     <div class="row">
         <div>
-            <h2> "This rose has thorns and here they are!" </h2>
+            <h2 class="secText"> "This rose has thorns and here they are!" </h2>
             <p class="tyriaDesc"> Among the many races that inhabit Tyria, five in particular exist as the most influential. These are the playable races of Guild Wars 2, each with their own home region, storyline, armour and weapon sets</p><br>
         </div>
     </div>
@@ -100,22 +104,39 @@
 
             <div class="tabs-panel card" id="panel2" onclick="flip()">
                 <div class="front"><img src="/stylesheets/images/norn.jpg" class="raceImg"></div>
-                <div class="back">2</div>
+                <div class="back">
+                    <h3>Norn <br> </h3>
+                    The norn are a 9-foot tall race that currently inhabit the central Shiverpeak Mountains, with some living in or near the abandoned dwarven structures.
+                    The individualistic norn live for the hunt, so their tracking, stealth and killing skills make them invaluable allies in any combat situation.
+                    The largest gathering of norn one can expect to find outside trading posts is in hunting parties that have united to combat a powerful foe.
+                </div>
             </div>
 
             <div class="tabs-panel card" id="panel3" onclick="flip()">
                 <div class="front"><img src="/stylesheets/images/charr.jpg" class="raceImg"></div>
-                <div class="back">2</div>
-            </div>
+                <div class="back">
+                        <h3>Charr<br> </h3>
+                        The charr are a race of large, savage, feline creatures that occupy much of eastern Tyria. They have renounced all gods as false and instead view all of life, from magic to combat, with a hard, cynical eye.
+                        Their culture has developed into a military state where they are raised as warriors from birth.
+                    </div>
+                </div>
 
             <div class="tabs-panel card" id="panel4" onclick="flip()">
                 <div class="front"><img src="/stylesheets/images/sylvari.jpg" class="raceImg"></div>
-                <div class="back">2</div>
+                <div class="back">
+                    <h3>Sylvari<br> </h3>
+                    The sylvari are a young, inquisitive race of botanical humanoids. The first sylvari sprouted from the Pale Tree in Arbor Bay, emerging in 1302 AE.
+                    The tree was planted by Ronan and raised by Ventari, who were attempting to escape the violence that engulfed Tyria.
+                </div>
             </div>
 
             <div class="tabs-panel card" id="panel5" onclick="flip()">
                 <div class="front"><img src="/stylesheets/images/asura.jpg" class="raceImg"></div>
-                <div class="back">2</div>
+                <div class="back">
+                    <h3>Asura<br> </h3>
+                    The asura are a race of diminutive artisans who secretly dwelt below-ground for thousands of years until the minions of the Great Destroyer forced them out of their underground homes in 1078 AE.
+                    Since then, they have adapted to surface life and quickly established themselves as one of the most powerful races in Tyria.
+                </div>
             </div>
         </div>
     </div>
@@ -127,7 +148,7 @@
 
 <section class="sectionTyria">
     <div class="row">
-        <h2> "Arise, my brainless, arise!" </h2>
+        <h2 class="secText"> "Arise, my brainless, arise!" </h2>
         <p class="tyriaDesc"> There are 8 Professions in the base game of GW2, each with skills, traits and equipment to allow a player to customise and tweak thier character to the fullest. Professions are not limited by
             traditional archetypes such as Healer, Tank and DPS, rather, each is able to damage, control and support during combat.</p><br>
     </div>
@@ -609,6 +630,8 @@
 <div class="sectionTitle">
     <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Expansion </h1>
 </div>
+
+
 <!--<div>-->
     <!--<img src="stylesheets/images/heart-of-thorns-logo.gif">-->
 <!--</div>-->
