@@ -23,7 +23,7 @@
         <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
         <script type="text/javascript">function toggleButtonPlayer_fhcIB(buttonobj){buttonobj.style.display="none";if(buttonobj.id=="gaf210codes-fhcIB-playbutton"){document.getElementById("gaf210codes-fhcIB-pausebutton").style.display="inline";}else{document.getElementById("gaf210codes-fhcIB-playbutton").style.display="inline";}}/*Youtube player code generated @ http://gaf210.imvustylez.net*/</script>
         <div class="gaf210codes_youtubebox">
-            <iframe width="250" height="250" src="https://www.youtube.com/embed/Q2ze7znnAmo?enablejsapi=1&amp;fs=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;playlist=Q2ze7znnAmo" onload="gaf210codes_fhcIB=new YT.Player(this)"></iframe>
+            <iframe width="250" height="250" src="https://www.youtube.com/embed/QtvnP91PDfQ?enablejsapi=1&amp;fs=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;controls=0&amp;autoplay=1&amp;loop=0&amp;playlist=QtvnP91PDfQ" onload="gaf210codes_fhcIB=new YT.Player(this)"></iframe>
         </div>
         <button type="button" class="playerbutton button" id="gaf210codes-fhcIB-playbutton" onclick="gaf210codes_fhcIB.playVideo();toggleButtonPlayer_fhcIB(this)" style="display:none">play</button>
         <button type="button" class="playerbutton button" id="gaf210codes-fhcIB-pausebutton" onclick="gaf210codes_fhcIB.pauseVideo();toggleButtonPlayer_fhcIB(this)">pause music</button>
@@ -54,7 +54,7 @@
 
 
 
-<div class="reveal revealS" id="exampleModal1" data-reveal>
+<div class="reveal revealS" id="exampleModal1" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
     <h2 class="page-header">Register</h2>
     {{#if errors}}
         {{#each errors}}
@@ -104,19 +104,6 @@
         })
 
     });
-
-
-    var items = document.querySelectorAll('.circle a');
-
-    for(var i = 0, l = items.length; i < l; i++) {
-        items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-
-        items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-    }
-
-    document.querySelector('.menu-button').onclick = function(e) {
-        e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
-    }
 
 </script>
 

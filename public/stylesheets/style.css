@@ -10,9 +10,9 @@ html{
 	color: #60AE34;
 	font-family: 'Raleway', 'Arial', sans-serif;
 	text-rendering: optimizeLegibility;
-    overflow: -moz-scrollbars-none;
-    overflow: scroll;
-    overflow-x: hidden;
+    /*overflow: -moz-scrollbars-none;*/
+    /*overflow: scroll;*/
+    /*overflow-x: hidden;*/
 }
 
 ::-webkit-scrollbar {
@@ -26,7 +26,7 @@ html{
 
 /*media query for MEDIUM SCREEN SIZES*/
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    *{
+    html{
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -35,7 +35,7 @@ html{
 
 /*media query for SMALL SCREEN SIZES*/
 @media screen and (max-width: 39.9375em) {
-    *{
+    html{
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -210,9 +210,30 @@ p.loggedInAs{
 }
 
 .alert-danger{
+    /*position: absolute;*/
+    /*top:15%;*/
+    /*left:1%;*/
+    z-index: 1000;
     color: #ff000b;
     font-weight: 400;
     padding: 5px;
+}
+
+/*media query for MEDIUM SCREEN SIZES*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .alert-danger{
+        top:20%;
+        left:2%;
+    }
+}
+
+
+/*media query for SMALL SCREEN SIZES*/
+@media screen and (max-width: 39.9375em) {
+    .alert-danger{
+        top:20%;
+        left:2%;
+    }
 }
 
 .myGW2{
@@ -225,10 +246,17 @@ p.loggedInAs{
 }
 
 .revealS{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("images/regbg.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("images/zhaitan.jpg") no-repeat center center fixed;
     width: 20em;
     height: 30em;
 }
+
+.revealG{
+    background: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 1.0));
+    position: absolute;
+    z-index: 9000;
+}
+
 
 .reveal h2{
     color: #fff;
@@ -272,7 +300,7 @@ div.reveal div.authForm{
 
 h2.secText{
     font-family: Raleway, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 
