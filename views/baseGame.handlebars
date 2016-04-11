@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'
       xmlns="http://www.w3.org/1999/html"/>
-<html lang="en">
+<html lang="en" >
 <head>
 </head>
-<body>
+<body ng-app="">
 
 
 <div>
@@ -12,9 +12,18 @@
     <img src="stylesheets/images/heart-of-thorns-logo.gif">
 </div>
 
-<div class="sectionTitle">
-    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> The Game </h1>
+<div class="sectionTitle" >
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s" id="first" data-magellan-target="first"> The Game </h1>
 </div>
+
+
+<ul class="horizontal menu" data-magellan>
+    <li class="button"> Game </li>
+    <li><a href="#second" class="button">To Races</a></li>
+    <li><a href="#third" class="button">To Professions</a></li>
+    <li><a href="#fourth" class="button">To Expansion</a></li>
+</ul>
+
 
 <section class="sectionTyria features">
     <div class="row">
@@ -72,11 +81,17 @@
     </div>
 </section>
 
-
-
-<div class="sectionTitle">
-    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Races of Tyria </h1>
+<div class="sectionTitle" >
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s" id="second" data-magellan-target="second"> Races of Tyria </h1>
 </div>
+<ul class="horizontal menu" data-magellan>
+    <li><a href="#first" class="button">To Game</a></li>
+    <li class="button"> Races </li>
+    <li><a href="#third" class="button">To Professions</a></li>
+    <li><a href="#fourth" class="button">To Expansion</a></li>
+</ul>
+
+
 
 <section class="sectionTyria">
     <div class="row">
@@ -85,6 +100,7 @@
             <p class="tyriaDesc"> Among the many races that inhabit Tyria, five in particular exist as the most influential. These are the playable races of Guild Wars 2, each with their own home region, storyline, armour and weapon sets</p><br>
         </div>
     </div>
+
     <div class="row raceTabs">
         <ul class="tabs" data-tabs id="example-tabs">
             <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Human</a></li>
@@ -119,11 +135,11 @@
             <div class="tabs-panel card" id="panel3" onclick="flip()">
                 <div class="front"><img src="/stylesheets/images/charr.jpg" class="raceImg"></div>
                 <div class="back">
-                        <h3>Charr<br> </h3>
-                        The charr are a race of large, savage, feline creatures that occupy much of eastern Tyria. They have renounced all gods as false and instead view all of life, from magic to combat, with a hard, cynical eye.
-                        Their culture has developed into a military state where they are raised as warriors from birth.
-                    </div>
+                    <h3>Charr<br> </h3>
+                    The charr are a race of large, savage, feline creatures that occupy much of eastern Tyria. They have renounced all gods as false and instead view all of life, from magic to combat, with a hard, cynical eye.
+                    Their culture has developed into a military state where they are raised as warriors from birth.
                 </div>
+            </div>
 
             <div class="tabs-panel card" id="panel4" onclick="flip()">
                 <div class="front"><img src="/stylesheets/images/sylvari.jpg" class="raceImg"></div>
@@ -146,9 +162,15 @@
     </div>
 </section>
 
-<div class="sectionTitle">
-    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Professions </h1>
+<div class="sectionTitle" >
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s" id="third" data-magellan-target="third"> Professions </h1>
 </div>
+<ul class="horizontal menu" data-magellan>
+    <li><a href="#first" class="button">To Game</a></li>
+    <li><a href="#second" class="button">To Races</a></li>
+    <li class="button"> Professions </li>
+    <li><a href="#fourth" class="button">To Expansion</a></li>
+</ul>
 
 <section class="sectionTyria">
     <div class="row">
@@ -157,483 +179,508 @@
             traditional archetypes such as Healer, Tank and DPS, rather, each is able to damage, control and support during combat.</p><br>
     </div>
 
+    <select class="profsDropdown" ng-model="profs">
+            <option value="ele">Elementalist</option>
+            <option value="necro">Necromancer</option>
+            <option value="mesmer">mesmer</option>
+            <option value="engi">Engineer</option>
+            <option value="ranger">Ranger</option>
+            <option value="thief">Thief</option>
+            <option value="engi">Engineer</option>
+            <option value="guard">Guardian</option>
+            <option value="warr">Warrior</option>
+    </select>
 
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Elementalist</h2>
-            <p> Elementalists have harnessed Tyria's natural forces. Their powers of destruction are drawn from an affinity with the four elements that make up the world.
-                They conjure air, fire, earth or water to assault their enemies. As a scholar profession, elementalists wear light armor. </p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOElementalist.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Elementalist</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Light </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Tempest</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Warhorn </p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Fire Attunement</h5> <p>Attune to fire, gaining heavy damage and burning abilities.</p><br>
-                                    <h5>Water Attunement</h5> <p>Attune to water, gaining superior support and healing abilities.</p><br>
-                                    <h5>Air Attunement</h5> <p>Attune to air, gaining heavy damage and control abilities.</p><br>
-                                    <h5>Earth Attunement</h5> <p>Attune to earth, gaining superior damage-over-time and defensive abilities.</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Staff: </strong>Can cast different area effect spells with direct or lasting effects.</p><br>
+    <div ng-switch="profs">
+        <div ng-switch-default>
+            <!--<img src="/stylesheets/images/profs.jpg">-->
+        </div>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Dagger: </strong>Emphasizes close range, heavy damage spells.</p>
-                                    <p><strong>Scepter: </strong>Casts various single and multiple target, medium range spells.</p><br>
+        <div class="row" ng-switch-when="ele">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Elementalist</h2>
+                <p> Elementalists have harnessed Tyria's natural forces. Their powers of destruction are drawn from an affinity with the four elements that make up the world.
+                    They conjure air, fire, earth or water to assault their enemies. As a scholar profession, elementalists wear light armor. </p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOElementalist.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Elementalist</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Light </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Tempest</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Warhorn </p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Fire Attunement</h5> <p>Attune to fire, gaining heavy damage and burning abilities.</p><br>
+                                        <h5>Water Attunement</h5> <p>Attune to water, gaining superior support and healing abilities.</p><br>
+                                        <h5>Air Attunement</h5> <p>Attune to air, gaining heavy damage and control abilities.</p><br>
+                                        <h5>Earth Attunement</h5> <p>Attune to earth, gaining superior damage-over-time and defensive abilities.</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Staff: </strong>Can cast different area effect spells with direct or lasting effects.</p><br>
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Dagger: </strong>Provides powerful close range abilities suitable for offense as well as abilities designed for defense.</p>
-                                    <p><strong>Focus: </strong>Provides supportive spells in form of energy shields, disabling snares and defensive area effects.</p>
-                                    <p><strong>Warhorn: </strong>Provides assistance to you in both supporting your allies and creating disruptive areas for enemies. (Tempest specialization only)</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Dagger: </strong>Emphasizes close range, heavy damage spells.</p>
+                                        <p><strong>Scepter: </strong>Casts various single and multiple target, medium range spells.</p><br>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Trident: </strong> Long range magical weapon for manipulating attuned elements underwater.</p>
-                                </div>
-                            </li>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Dagger: </strong>Provides powerful close range abilities suitable for offense as well as abilities designed for defense.</p>
+                                        <p><strong>Focus: </strong>Provides supportive spells in form of energy shields, disabling snares and defensive area effects.</p>
+                                        <p><strong>Warhorn: </strong>Provides assistance to you in both supporting your allies and creating disruptive areas for enemies. (Tempest specialization only)</p><br>
 
-                        </ul>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Trident: </strong> Long range magical weapon for manipulating attuned elements underwater.</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Necromancer</h2>
-            <p> Necromancers use a special resource called life force which is gathered each time a creature near them dies, or additionally by using certain skills.
-                Its main function is to fuel necromancer's Death Shroud. While in Death Shroud, the character's health is temporarily replaced by accumulated life force,
-                and has access to new skills and traits, such as using fear as a weapon.  </p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OONecromancer.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Necromancer</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Light </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Reaper</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Greatsword </p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Marks</h5> <p>Marks are ground-targeted spells that produce a variety of effects for allies and/or foes. A mark is placed at a location and will trigger after a foe steps on it.</p><br>
-                                    <h5>Minions</h5> <p>The necromancer can summon undead minions to do their bidding and attack foes. Every minion-summoning spell has an associated sequence skill that appears after the minion has been summoned.
-                                    These additional skills range from consuming the minion to gain health to making them charge at foes to knock them over.</p><br>
-                                    <h5>Spectral</h5> <p>Spectral skills are exclusive to necromancers, involving the use of otherworldly spectral energy. All Spectral skills grant life force.</p><br>
-                                    <h5>Corruption</h5> <p>Corruption skills are double-edged swords, applying conditions to both the necromancer and the target(s) when cast.</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Greatsword: </strong>Slow attacks with massive damage, focusing in close combat and chill. (Reaper specialization only)</p>
-                                    <p><strong>Staff: </strong>Long range spellcasting weapon which emphasizes AoE support via use of marks.</p><br>
+        <div class="row" ng-switch-when="necro">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Necromancer</h2>
+                <p> Necromancers use a special resource called life force which is gathered each time a creature near them dies, or additionally by using certain skills.
+                    Its main function is to fuel necromancer's Death Shroud. While in Death Shroud, the character's health is temporarily replaced by accumulated life force,
+                    and has access to new skills and traits, such as using fear as a weapon.  </p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OONecromancer.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Necromancer</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Light </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Reaper</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Greatsword </p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Marks</h5> <p>Marks are ground-targeted spells that produce a variety of effects for allies and/or foes. A mark is placed at a location and will trigger after a foe steps on it.</p><br>
+                                        <h5>Minions</h5> <p>The necromancer can summon undead minions to do their bidding and attack foes. Every minion-summoning spell has an associated sequence skill that appears after the minion has been summoned.
+                                        These additional skills range from consuming the minion to gain health to making them charge at foes to knock them over.</p><br>
+                                        <h5>Spectral</h5> <p>Spectral skills are exclusive to necromancers, involving the use of otherworldly spectral energy. All Spectral skills grant life force.</p><br>
+                                        <h5>Corruption</h5> <p>Corruption skills are double-edged swords, applying conditions to both the necromancer and the target(s) when cast.</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Greatsword: </strong>Slow attacks with massive damage, focusing in close combat and chill. (Reaper specialization only)</p>
+                                        <p><strong>Staff: </strong>Long range spellcasting weapon which emphasizes AoE support via use of marks.</p><br>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Axe: </strong>Use powerful attacks to tear enemies at medium range.</p>
-                                    <p><strong>Dagger: </strong>Steal an enemy's health or life force at close range.</p>
-                                    <p><strong>Scepter: </strong>Inflict various conditions on foes at a long range.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Axe: </strong>Use powerful attacks to tear enemies at medium range.</p>
+                                        <p><strong>Dagger: </strong>Steal an enemy's health or life force at close range.</p>
+                                        <p><strong>Scepter: </strong>Inflict various conditions on foes at a long range.</p><br>
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Dagger: </strong>Weaken foes or transfer conditions to them.</p>
-                                    <p><strong>Focus: </strong>Make the enemy vulnerable or chill them, while removing boons.</p>
-                                    <p><strong>Warhorn: </strong>Summon a swarm of locusts or daze enemies with the wail of the horn.</p><br>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Dagger: </strong>Weaken foes or transfer conditions to them.</p>
+                                        <p><strong>Focus: </strong>Make the enemy vulnerable or chill them, while removing boons.</p>
+                                        <p><strong>Warhorn: </strong>Summon a swarm of locusts or daze enemies with the wail of the horn.</p><br>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Spear: </strong> Reap enemies with close range attacks or terrorize them by summoning vampiric shrimp.</p>
-                                    <p><strong>Trident: </strong> Thwart the enemy with offensive support and sink them into the abyss.</p>
-                                </div>
-                            </li>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Spear: </strong> Reap enemies with close range attacks or terrorize them by summoning vampiric shrimp.</p>
+                                        <p><strong>Trident: </strong> Thwart the enemy with offensive support and sink them into the abyss.</p>
+                                    </div>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Mesmer</h2>
-            <p> Mesmers are magical duelists who wield deception as a weapon. Using powerful illusions, clones, and phantasmal magic to confuse and distract their foes,
-                mesmers make sure every fight is balanced in their favor and their opponents can’t believe their eyes. </p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOMesmer.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Mesmer</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Light </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Chronomancer</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Shield </p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Illusions</h5> <p>Physical representations of the caster. Up to three illusions can be maintained. There are two types of illusions:</p><br>
-                                    <h5>Clones</h5> <p>Have the caster's appearance, main-hand weapon, and name. Clones have 3200 base health at level 80, but do very low damage.</p><br>
-                                    <h5>Phantasms</h5> <p>Appear as ethereal images of the caster, but take up the name of the skill (e.g. Phantasmal Duelist) instead of the caster's name.Phantasms have higher damage and health than clones.</p><br>
-                                    <h5>Mantras</h5> <p>Healing or utility skills which can be used up to 3 times with no cast time, though they do require a relatively long 'charge' time..</p><br>
-                                    <h5>Glamours</h5> <p>Glamours are utility skills which create shining fields on the ground, which have helpful effects on allies or harmful effects on enemies.</p><br>
-                                    <h5>Manipulations</h5> <p>Manipulations are utility skills used to evade attacks, mislead opponents, redirect forces or to simply escape from a deadly situation.</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Greatsword: </strong>Functions as a ranged weapon, good for a balanced mix of ranged combat and area damage.</p>
-                                    <p><strong>Staff: </strong>Focuses on giving conditions to foes and boons to allies. Like the Greatsword, it is good at dealing with multiple targets.</p><br>
+        <div class="row" ng-switch-when="mesmer">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Mesmer</h2>
+                <p> Mesmers are magical duelists who wield deception as a weapon. Using powerful illusions, clones, and phantasmal magic to confuse and distract their foes,
+                    mesmers make sure every fight is balanced in their favor and their opponents can’t believe their eyes. </p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOMesmer.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Mesmer</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Light </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Chronomancer</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Shield </p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Illusions</h5> <p>Physical representations of the caster. Up to three illusions can be maintained. There are two types of illusions:</p><br>
+                                        <h5>Clones</h5> <p>Have the caster's appearance, main-hand weapon, and name. Clones have 3200 base health at level 80, but do very low damage.</p><br>
+                                        <h5>Phantasms</h5> <p>Appear as ethereal images of the caster, but take up the name of the skill (e.g. Phantasmal Duelist) instead of the caster's name.Phantasms have higher damage and health than clones.</p><br>
+                                        <h5>Mantras</h5> <p>Healing or utility skills which can be used up to 3 times with no cast time, though they do require a relatively long 'charge' time..</p><br>
+                                        <h5>Glamours</h5> <p>Glamours are utility skills which create shining fields on the ground, which have helpful effects on allies or harmful effects on enemies.</p><br>
+                                        <h5>Manipulations</h5> <p>Manipulations are utility skills used to evade attacks, mislead opponents, redirect forces or to simply escape from a deadly situation.</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Greatsword: </strong>Functions as a ranged weapon, good for a balanced mix of ranged combat and area damage.</p>
+                                        <p><strong>Staff: </strong>Focuses on giving conditions to foes and boons to allies. Like the Greatsword, it is good at dealing with multiple targets.</p><br>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Scepter: </strong>Focusing on ranged combat, it creates clones quickly and can torment, blind and confuse enemies.</p>
-                                    <p><strong>Sword: </strong>Focusing on melee combat, it can get the Mesmer in the fight quickly and can easily hit multiple targets in front of you.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Scepter: </strong>Focusing on ranged combat, it creates clones quickly and can torment, blind and confuse enemies.</p>
+                                        <p><strong>Sword: </strong>Focusing on melee combat, it can get the Mesmer in the fight quickly and can easily hit multiple targets in front of you.</p><br>
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Focus: </strong>Offers help with movement. Its Phantasm protects from projectiles.</p>
-                                    <p><strong>Pistol: </strong>Offers a multi-target condition attack. Its Phantasm causes high single target damage.</p>
-                                    <p><strong>Shield: </strong>Offers quickness and stuns. Its Phantasm slows enemies. (Chronomancer specialization only)</p><br>
-                                    <p><strong>Sword: </strong>Offers further defense via another block ability. Its Phantasm jumps in and out of melee combat, making it more difficult to hit.</p><br>
-                                    <p><strong>Torch: </strong>Gives an area blind and burn attack which also makes you briefly invisible. Its Phantasm burns enemies and grants fury to allies.</p><br>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Focus: </strong>Offers help with movement. Its Phantasm protects from projectiles.</p>
+                                        <p><strong>Pistol: </strong>Offers a multi-target condition attack. Its Phantasm causes high single target damage.</p>
+                                        <p><strong>Shield: </strong>Offers quickness and stuns. Its Phantasm slows enemies. (Chronomancer specialization only)</p><br>
+                                        <p><strong>Sword: </strong>Offers further defense via another block ability. Its Phantasm jumps in and out of melee combat, making it more difficult to hit.</p><br>
+                                        <p><strong>Torch: </strong>Gives an area blind and burn attack which also makes you briefly invisible. Its Phantasm burns enemies and grants fury to allies.</p><br>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Spear: </strong> Focuses on damage and manipulation of position.</p>
-                                    <p><strong>Trident: </strong> Damages and applies various conditions and boons.</p>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Spear: </strong> Focuses on damage and manipulation of position.</p>
+                                        <p><strong>Trident: </strong> Damages and applies various conditions and boons.</p>
 
-                                </div>
-                            </li>
+                                    </div>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Engineer</h2>
-            <p> The engineer's profession mechanic is the tool belt. It appears above the profession's skill bar, granting each equipped utility and healing skill a corresponding extra skill.
-                For example, when paired with the Grenade Kit, the tool belt allows a Grenade Barrage; with the Med Kit, it adds a Bandage Self.
-                With their kits, the engineer can have the most skills available during combat among all professions: Each of the engineer's kits provide a set of five different weapon skills.
-                In addition, two of the engineer's elite skills provide new sets of skills, making it a truly versatile profession.
-                With an arsenal of turrets and kits, the engineer can also become quite durable when properly prepared. However, this is somewhat offset by the long recharge times of their abilities.</p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOEngineer.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Engineer</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Medium </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Scrapper</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Hammer </p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Weapon kits</h5> <p>Kits that replace the currently equipped weapon (and their skills) with a new weapon. There are four weapon kits available: the Flamethrower, the Elixir Gun, the Elite Mortar Kit and the Tool Kit.</p><br>
-                                    <h5>Device kits</h5> <p>Kits that replace the currently equipped weapon with more specialized skills. There are three different device kits in total: the Bomb Kit, the Grenade Kit, and the Med Kit.</p><br>
-                                    <h5>Gadgets</h5> <p>A mixed group of various devices, ranging from Rocket Boots to Utility Goggles.</p><br>
-                                    <h5>Turrets</h5> <p>Immobile allied devices deployed to help defend and control an area. The amount of active turrets is limited by the amount of turret skills equipped. Turrets can be packed up by interacting with them, reducing their next deployment cooldown by 25%, or triggered to self-destruct by using the corresponding tool belt skill.</p><br>
-                                    <h5>Elixirs</h5> <p>Elixirs often provide random support effects for either the engineer or, if thrown by use of tool belt skills, to their allies as well. These random effects are dependent upon the skill used as the skill determines the pool of possible effects.</p><br>
-                                    <h5>Gyro</h5> <p>Mobile drones that perform various tasks from dealing damage to enemies to supporting allies. (Scrapper specialization only)</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Hammer: </strong>Reducing incoming damage, supporting allies, and improving Superspeed and lightning fields. (Scrapper specialization only)</p>
-                                    <p><strong>Rifle: </strong>Blast foes out of the way or jump to them with a powerful slam attack. Rifles provide the engineer with the ability to manipulate their position as well as the opponent.
-                                        With a quick interrupt, piercing ranged shots and a short-ranged bleed to deter foes who come too close, this weapon best suits the engineer who prefers to stay mobile.</p><br>
+        <div class="row" ng-switch-when="engi">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Engineer</h2>
+                <p> The engineer's profession mechanic is the tool belt. It appears above the profession's skill bar, granting each equipped utility and healing skill a corresponding extra skill.
+                    For example, when paired with the Grenade Kit, the tool belt allows a Grenade Barrage; with the Med Kit, it adds a Bandage Self.
+                    With their kits, the engineer can have the most skills available during combat among all professions: Each of the engineer's kits provide a set of five different weapon skills.
+                    In addition, two of the engineer's elite skills provide new sets of skills, making it a truly versatile profession.
+                    With an arsenal of turrets and kits, the engineer can also become quite durable when properly prepared. However, this is somewhat offset by the long recharge times of their abilities.</p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOEngineer.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Engineer</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Medium </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Scrapper</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Hammer </p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Weapon kits</h5> <p>Kits that replace the currently equipped weapon (and their skills) with a new weapon. There are four weapon kits available: the Flamethrower, the Elixir Gun, the Elite Mortar Kit and the Tool Kit.</p><br>
+                                        <h5>Device kits</h5> <p>Kits that replace the currently equipped weapon with more specialized skills. There are three different device kits in total: the Bomb Kit, the Grenade Kit, and the Med Kit.</p><br>
+                                        <h5>Gadgets</h5> <p>A mixed group of various devices, ranging from Rocket Boots to Utility Goggles.</p><br>
+                                        <h5>Turrets</h5> <p>Immobile allied devices deployed to help defend and control an area. The amount of active turrets is limited by the amount of turret skills equipped. Turrets can be packed up by interacting with them, reducing their next deployment cooldown by 25%, or triggered to self-destruct by using the corresponding tool belt skill.</p><br>
+                                        <h5>Elixirs</h5> <p>Elixirs often provide random support effects for either the engineer or, if thrown by use of tool belt skills, to their allies as well. These random effects are dependent upon the skill used as the skill determines the pool of possible effects.</p><br>
+                                        <h5>Gyro</h5> <p>Mobile drones that perform various tasks from dealing damage to enemies to supporting allies. (Scrapper specialization only)</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Hammer: </strong>Reducing incoming damage, supporting allies, and improving Superspeed and lightning fields. (Scrapper specialization only)</p>
+                                        <p><strong>Rifle: </strong>Blast foes out of the way or jump to them with a powerful slam attack. Rifles provide the engineer with the ability to manipulate their position as well as the opponent.
+                                            With a quick interrupt, piercing ranged shots and a short-ranged bleed to deter foes who come too close, this weapon best suits the engineer who prefers to stay mobile.</p><br>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Pistol: </strong>Poison, bleed or confuse enemies with variety of ranged shots. Pistols allow the engineer to quickly stack a variety of damaging conditions in a short amount of time.
-                                        This weapon is ideal for engineers who like to focus on condition damage.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Pistol: </strong>Poison, bleed or confuse enemies with variety of ranged shots. Pistols allow the engineer to quickly stack a variety of damaging conditions in a short amount of time.
+                                            This weapon is ideal for engineers who like to focus on condition damage.</p><br>
 
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Pistol: </strong>Spread sticky glue on the ground or fire a jet of flames from your pistol, providing further condition damage and the option of immobilizing foes.
-                                        An engineer wielding dual pistols is the only profession capable of reliably inflicting four damaging conditions.</p>
-                                    <p><strong>Shield: </strong>Provides protection from ranged and melee attacks and can be used to push foes back with a magnetic pulse. Can also be thrown like a boomerang for a 2-hit ranged attack.
-                                        Good for engineers who value defense over pure offense while wielding a pistol.</p><br>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Pistol: </strong>Spread sticky glue on the ground or fire a jet of flames from your pistol, providing further condition damage and the option of immobilizing foes.
+                                            An engineer wielding dual pistols is the only profession capable of reliably inflicting four damaging conditions.</p>
+                                        <p><strong>Shield: </strong>Provides protection from ranged and melee attacks and can be used to push foes back with a magnetic pulse. Can also be thrown like a boomerang for a 2-hit ranged attack.
+                                            Good for engineers who value defense over pure offense while wielding a pistol.</p><br>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Harpoon gun: </strong> Ranged weapon suitable for controlling foes underwater.</p>
-                                </div>
-                            </li>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Harpoon gun: </strong> Ranged weapon suitable for controlling foes underwater.</p>
+                                    </div>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Ranger</h2>
-            <p> Rangers are flexible and durable--proficient with the bow, yet surgical with the sword. Their loyal pets, which rangers tame and train, distract enemies while the rangers strike safely from a distance.
-                As an adventurer profession, rangers wear medium armor. The pet is available exclusively for the ranger profession. They are AI controlled allies that fight alongside the ranger and are maintained through a special user interface that can set basic behavior modes and activate a skill.
-                Four pets in total can accompany the ranger (two for fighting on land, two for aquatic), but only one pet will fight at a time. Rangers can switch pets during a fight to adapt to in-game situations.</p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OORanger.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Ranger</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Medium </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Druid</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Staff</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <p>The Ranger profession mechanic is unique in the sense that it does not have a dedicated set of skills for itself, rather, its skills depend on the currently active pet, controlled by the F1 - F4 buttons: </p><br>
-                                    <h5>F1</h5> <p>locks your pet onto your current target.</p><br>
-                                    <h5>F2</h5> <p>activates the species-specific skill of your pet. Your pet has 3 other skills, shared among its pet family, that it will use on its own.</p><br>
-                                    <h5>F3</h5> <p>commands your pet back to you.</p><br>
-                                    <h5>F4</h5> <p>swaps your currently active pet</p><br>
+        <div class="row" ng-switch-when="ranger">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Ranger</h2>
+                <p> Rangers are flexible and durable--proficient with the bow, yet surgical with the sword. Their loyal pets, which rangers tame and train, distract enemies while the rangers strike safely from a distance.
+                    As an adventurer profession, rangers wear medium armor. The pet is available exclusively for the ranger profession. They are AI controlled allies that fight alongside the ranger and are maintained through a special user interface that can set basic behavior modes and activate a skill.
+                    Four pets in total can accompany the ranger (two for fighting on land, two for aquatic), but only one pet will fight at a time. Rangers can switch pets during a fight to adapt to in-game situations.</p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OORanger.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Ranger</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Medium </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Druid</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Staff</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <p>The Ranger profession mechanic is unique in the sense that it does not have a dedicated set of skills for itself, rather, its skills depend on the currently active pet, controlled by the F1 - F4 buttons: </p><br>
+                                        <h5>F1</h5> <p>locks your pet onto your current target.</p><br>
+                                        <h5>F2</h5> <p>activates the species-specific skill of your pet. Your pet has 3 other skills, shared among its pet family, that it will use on its own.</p><br>
+                                        <h5>F3</h5> <p>commands your pet back to you.</p><br>
+                                        <h5>F4</h5> <p>swaps your currently active pet</p><br>
 
-                                    <h5>Pet skills</h5> <p>See link for a full list of <a href="https://wiki.guildwars2.com/wiki/List_of_pet_skills">Pet Skills</a> in GW2</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Staff: </strong> A support oriented long range weapon. (Druid specialization only).</p>
-                                    <p><strong>Greatsword: </strong>A brute force, heavy-damage weapon with emphasis on countering and evasion.</p>
-                                    <p><strong>Longbow: </strong>Powerful, long-range weapon used for Rapid Fire strikes and AoE barrages.</p>
-                                    <p><strong>Shortbow: </strong>Quick skirmishing weapon relying on movement, positioning, and conditions for quick kills.</p><br>
+                                        <h5>Pet skills</h5> <p>See link for a full list of <a href="https://wiki.guildwars2.com/wiki/List_of_pet_skills">Pet Skills</a> in GW2</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Staff: </strong> A support oriented long range weapon. (Druid specialization only).</p>
+                                        <p><strong>Greatsword: </strong>A brute force, heavy-damage weapon with emphasis on countering and evasion.</p>
+                                        <p><strong>Longbow: </strong>Powerful, long-range weapon used for Rapid Fire strikes and AoE barrages.</p>
+                                        <p><strong>Shortbow: </strong>Quick skirmishing weapon relying on movement, positioning, and conditions for quick kills.</p><br>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Sword: </strong>Mobile melee strikes which can be used to distance the ranger from the target or surprise them from behind.</p><br>
-                                    <p><strong>Axe: </strong>Medium ranged throwing weapon which can ricochet off a target or can toss a cluster of axes.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Sword: </strong>Mobile melee strikes which can be used to distance the ranger from the target or surprise them from behind.</p><br>
+                                        <p><strong>Axe: </strong>Medium ranged throwing weapon which can ricochet off a target or can toss a cluster of axes.</p><br>
 
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Axe: </strong>Enter a stance to reflect incoming strikes or throw the axe for a boomerang effect. </p>
-                                    <p><strong>Dagger: </strong>Used as a crippling ranged attack, or a quick poisonous stab for melee. </p>
-                                    <p><strong>Torch: </strong>Throw the torch at enemies for burning damage, or light areas on fire. </p>
-                                    <p><strong>Warhorn: </strong>Used to deal damage over time or buff allies. </p><br>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Axe: </strong>Enter a stance to reflect incoming strikes or throw the axe for a boomerang effect. </p>
+                                        <p><strong>Dagger: </strong>Used as a crippling ranged attack, or a quick poisonous stab for melee. </p>
+                                        <p><strong>Torch: </strong>Throw the torch at enemies for burning damage, or light areas on fire. </p>
+                                        <p><strong>Warhorn: </strong>Used to deal damage over time or buff allies. </p><br>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Harpoon gun: </strong> Use ranged attacks to strike multiple foes and makes use of the underwater environment.</p>
-                                    <p><strong>Spear: </strong> Keep foes at bay with close range spear stabs and swipes.</p>
-                                </div>
-                            </li>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Harpoon gun: </strong> Use ranged attacks to strike multiple foes and makes use of the underwater environment.</p>
+                                        <p><strong>Spear: </strong> Keep foes at bay with close range spear stabs and swipes.</p>
+                                    </div>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Thief</h2>
-            <p> Thieves are expert in the shadow arts. They utilize stealth and shadowstepping to surprise and to get close to their target. They're deadly in one-on-one combat using their agility,
-                acrobatic fighting style, and the ability to steal to overcome their enemies.
-                They have an affinity for setting traps and using venom. </p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOThief.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Thief</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Medium </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Daredevil</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Staff</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Dual wield</h5> <p>Skills are determined by the combination of main-hand and off-hand weapons equipped.</p><br>
-                                    <h5>Shadowstep</h5> <p>Certain skills allow the thief to disappear from one location and then instantly appear at a different location by traveling through the shadows.</p><br>
-                                    <h5>Stealth Attacks</h5> <p>These special skills replace the first weapon skill of the thief's skill bar while in stealth.</p><br>
-                                    <h5>Venom</h5> <p>Apply a creature's venom to your weapon to inflict conditions with next several attacks.</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Short bow: </strong>Ranged mobile weapon with AoE attacks and shadow step ability.</p>
-                                    <p><strong>Staff: </strong>Gain access to regular area-of-effect melee damage. (Daredevil specialization only)</p><br>
+        <div class="row" ng-switch-when="thief">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Thief</h2>
+                <p> Thieves are expert in the shadow arts. They utilize stealth and shadowstepping to surprise and to get close to their target. They're deadly in one-on-one combat using their agility,
+                    acrobatic fighting style, and the ability to steal to overcome their enemies.
+                    They have an affinity for setting traps and using venom. </p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOThief.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Thief</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Medium </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Daredevil</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Staff</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Dual wield</h5> <p>Skills are determined by the combination of main-hand and off-hand weapons equipped.</p><br>
+                                        <h5>Shadowstep</h5> <p>Certain skills allow the thief to disappear from one location and then instantly appear at a different location by traveling through the shadows.</p><br>
+                                        <h5>Stealth Attacks</h5> <p>These special skills replace the first weapon skill of the thief's skill bar while in stealth.</p><br>
+                                        <h5>Venom</h5> <p>Apply a creature's venom to your weapon to inflict conditions with next several attacks.</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Short bow: </strong>Ranged mobile weapon with AoE attacks and shadow step ability.</p>
+                                        <p><strong>Staff: </strong>Gain access to regular area-of-effect melee damage. (Daredevil specialization only)</p><br>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Dagger: </strong>Jump on a foe, attack quickly and inflict many conditions on them.</p>
-                                    <p><strong>Pistol: </strong>Ranged shots from pistol leave enemies vulnerable to following attacks.</p>
-                                    <p><strong>Sword: </strong>Flanking sword attacks provide extra evasiveness and controls enemy movement.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Dagger: </strong>Jump on a foe, attack quickly and inflict many conditions on them.</p>
+                                        <p><strong>Pistol: </strong>Ranged shots from pistol leave enemies vulnerable to following attacks.</p>
+                                        <p><strong>Sword: </strong>Flanking sword attacks provide extra evasiveness and controls enemy movement.</p><br>
 
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Dagger: </strong>Gives access to skills that allow quick escape by crippling the enemy or vanishing from sight.</p>
-                                    <p><strong>Pistol: </strong>Ranged weapon used to quickly retreat or to daze the target by a shot to the head or from a pistol whip. </p><br>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Dagger: </strong>Gives access to skills that allow quick escape by crippling the enemy or vanishing from sight.</p>
+                                        <p><strong>Pistol: </strong>Ranged weapon used to quickly retreat or to daze the target by a shot to the head or from a pistol whip. </p><br>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Harpoon gun: </strong>Bombard enemy with ranged attacks - good for kiting with several attacks that cause movement impairment.</p>
-                                    <p><strong>Spear: </strong>Rapid melee counterattacks spiced up with the usual thief tricks.</p>
-                                </div>
-                            </li>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Harpoon gun: </strong>Bombard enemy with ranged attacks - good for kiting with several attacks that cause movement impairment.</p>
+                                        <p><strong>Spear: </strong>Rapid melee counterattacks spiced up with the usual thief tricks.</p>
+                                    </div>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Guardian</h2>
-            <p> Guardians specialize in protective and defensive magic. A deep sense of loyalty to their allies fuels their passion and power. As a soldier profession, guardians wear heavy armor.</p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOGuardian.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Guardian</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Heavy </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Dragonhunter</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Longbow</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Symbols</h5> <p>these ground-based skills inflict damage to enemies and deliver a benefit to allies. Symbols persist for a few seconds and then dissipate. All symbols provide Combo Field: Light.</p><br>
-                                    <h5>Wards</h5> <p>a temporary line or ring on the ground that only pushes enemies that attempt to cross it (negated by Stability).</p><br>
-                                    <h5>Spirit Weapons</h5> <p> summon weapons that follow the guardian and can fight or aid, while also being able to be commanded for an additional effect.</p><br>
-                                    <h5>Consecration</h5> <p>these abilities focus on providing condition removal, projectile reflection and control for the guardian and its allies.</p><br>
-                                    <h5>Meditations</h5> <p>a type of utility skill that involves teleportation, healing, condition removal and AoE damage.</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Longbow: </strong>Focus on firing massive, single projectiles at a ferocious velocity having lots of potential in assisting allies. (Dragonhunter specialization only)</p>
-                                    <p><strong>Greatsword: </strong>High-damage, AoE, melee attacks combined with retaliation and positioning.</p>
-                                    <p><strong>Hammer: </strong>High-damage, AoE, melee attacks combined with protection and control abilities.</p><br>
-                                    <p><strong>Staff: </strong>Supportive weapon with mid range AoE attacks, healing and boons.</p>
+        <div class="row" ng-switch-when="guard">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Guardian</h2>
+                <p> Guardians specialize in protective and defensive magic. A deep sense of loyalty to their allies fuels their passion and power. As a soldier profession, guardians wear heavy armor.</p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOGuardian.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Guardian</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Heavy </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Dragonhunter</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Longbow</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Symbols</h5> <p>these ground-based skills inflict damage to enemies and deliver a benefit to allies. Symbols persist for a few seconds and then dissipate. All symbols provide Combo Field: Light.</p><br>
+                                        <h5>Wards</h5> <p>a temporary line or ring on the ground that only pushes enemies that attempt to cross it (negated by Stability).</p><br>
+                                        <h5>Spirit Weapons</h5> <p> summon weapons that follow the guardian and can fight or aid, while also being able to be commanded for an additional effect.</p><br>
+                                        <h5>Consecration</h5> <p>these abilities focus on providing condition removal, projectile reflection and control for the guardian and its allies.</p><br>
+                                        <h5>Meditations</h5> <p>a type of utility skill that involves teleportation, healing, condition removal and AoE damage.</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Longbow: </strong>Focus on firing massive, single projectiles at a ferocious velocity having lots of potential in assisting allies. (Dragonhunter specialization only)</p>
+                                        <p><strong>Greatsword: </strong>High-damage, AoE, melee attacks combined with retaliation and positioning.</p>
+                                        <p><strong>Hammer: </strong>High-damage, AoE, melee attacks combined with protection and control abilities.</p><br>
+                                        <p><strong>Staff: </strong>Supportive weapon with mid range AoE attacks, healing and boons.</p>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Mace: </strong>Supportive melee weapon that provides AoE regeneration and blocking.</p><br>
-                                    <p><strong>Scepter: </strong>Offensive, long-range, spell casting weapon used to immobilize and smite enemies.</p><br>
-                                    <p><strong>Sword: </strong>Balanced melee weapon with offense, defense and mobility.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Mace: </strong>Supportive melee weapon that provides AoE regeneration and blocking.</p><br>
+                                        <p><strong>Scepter: </strong>Offensive, long-range, spell casting weapon used to immobilize and smite enemies.</p><br>
+                                        <p><strong>Sword: </strong>Balanced melee weapon with offense, defense and mobility.</p><br>
 
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Focus: </strong>Balanced weapon that provides supportive spells for both offense and self-defense, including condition removal. </p>
-                                    <p><strong>Shield: </strong>Supportive weapon that provides local AoE projectile defense and protection.</p>
-                                    <p><strong>Torch: </strong>Offensive weapon that burns enemies while cleansing allies of conditions.</p>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Focus: </strong>Balanced weapon that provides supportive spells for both offense and self-defense, including condition removal. </p>
+                                        <p><strong>Shield: </strong>Supportive weapon that provides local AoE projectile defense and protection.</p>
+                                        <p><strong>Torch: </strong>Offensive weapon that burns enemies while cleansing allies of conditions.</p>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Spear: </strong>High-damage, rapid, close range attacks combined with positioning and control abilities.</p>
-                                    <p><strong>Trident: </strong>Supportive weapon with long range attacks that provides local AoE projectile defense, healing and condition removal.</p>
-                                </div>
-                            </li>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Spear: </strong>High-damage, rapid, close range attacks combined with positioning and control abilities.</p>
+                                        <p><strong>Trident: </strong>Supportive weapon with long range attacks that provides local AoE projectile defense, healing and condition removal.</p>
+                                    </div>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
-            <h2 class="profTitle">Warrior</h2>
-            <p> Warriors are masters of martial skills. They're versatile in combat and benefit from offensive and defensive abilities. Warriors inspire allies and demoralize enemies. As a soldier profession, warriors wear heavy armor.</p>
-            <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOWarrior.png" align="left"></div>
-            <div class="large-7 medium-7 columns profDesc">
-                <div class="profText">
-                    <div class="row row-padding small-12">
-                        <ul class="accordion" data-accordion role="tablist">
-                            <li class="accordion-item is-active">
-                                <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Warrior</a>
-                                <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
-                                    <h5>Armour type: </h5> <p>Heavy </p><br>
-                                    <h5>Elite Specialization: </h5> <p>Berserker</p><br>
-                                    <h5>Elite Specialisation weapon: </h5> <p>Torch</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
-                                <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
-                                    <h5>Banners</h5> <p>banner skills produce an environmental weapon that passively, or via unique skills, benefits nearby allies.
-                                    The banner can be picked up and carried around, or it can be planted in an area, allowing the carrier to continue fighting normally.</p><br>
-                                    <h5>Stance</h5> <p>a warrior skill type that grants temporary bonuses to the user like increased adrenaline gain or defensive abilities.</p><br>
-                                    <h5>Rages</h5> <p>utility skills which deal direct damage, control the tide of battle granting bonus adrenaline when used. (Berserker specialization only)</p><br>
-                                </div>
-                            </li>
-                            <li class="accordion-navigation">
-                                <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
-                                <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
-                                    <h5>Two Handed</h5>
-                                    <p><strong>Greatsword: </strong>Sweeping, brutal attacks which carry the greatsword's momentum from foe to foe.</p>
-                                    <p><strong>Hammer: </strong>Pounds the ground with area of effect attacks that can stagger a group of enemies.</p>
-                                    <p><strong>Longbow: </strong> Massive fire damage used to keep hordes of enemies at bay from afar.</p>
-                                    <p><strong>Rifle: </strong>Inflict various conditions and unleash powerful attacks against a single target.</p><br>
+        <div class="row" ng-switch-when="warr">
+            <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
+                <h2 class="profTitle">Warrior</h2>
+                <p> Warriors are masters of martial skills. They're versatile in combat and benefit from offensive and defensive abilities. Warriors inspire allies and demoralize enemies. As a soldier profession, warriors wear heavy armor.</p>
+                <div class="large-5 medium-5 columns profImage"><img class="prof" src="/stylesheets/images/OOWarrior.png" align="left"></div>
+                <div class="large-7 medium-7 columns profDesc">
+                    <div class="profText">
+                        <div class="row row-padding small-12">
+                            <ul class="accordion" data-accordion role="tablist">
+                                <li class="accordion-item is-active">
+                                    <a href="#panel13a" role="tab" class="accordion-title" id="panel13a-heading" aria-controls="panel13a">Warrior</a>
+                                    <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
+                                        <h5>Armour type: </h5> <p>Heavy </p><br>
+                                        <h5>Elite Specialization: </h5> <p>Berserker</p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Torch</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel11a" role="tab" class="accordion-title" id="panel11a-heading" aria-controls="panel11a">Skills</a>
+                                    <div id="panel11a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel11a-heading">
+                                        <h5>Banners</h5> <p>banner skills produce an environmental weapon that passively, or via unique skills, benefits nearby allies.
+                                        The banner can be picked up and carried around, or it can be planted in an area, allowing the carrier to continue fighting normally.</p><br>
+                                        <h5>Stance</h5> <p>a warrior skill type that grants temporary bonuses to the user like increased adrenaline gain or defensive abilities.</p><br>
+                                        <h5>Rages</h5> <p>utility skills which deal direct damage, control the tide of battle granting bonus adrenaline when used. (Berserker specialization only)</p><br>
+                                    </div>
+                                </li>
+                                <li class="accordion-navigation">
+                                    <a href="#panel12a" role="tab" class="accordion-title" id="panel12a-heading" aria-controls="panel12a">Weapons</a>
+                                    <div id="panel12a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel12a-heading">
+                                        <h5>Two Handed</h5>
+                                        <p><strong>Greatsword: </strong>Sweeping, brutal attacks which carry the greatsword's momentum from foe to foe.</p>
+                                        <p><strong>Hammer: </strong>Pounds the ground with area of effect attacks that can stagger a group of enemies.</p>
+                                        <p><strong>Longbow: </strong> Massive fire damage used to keep hordes of enemies at bay from afar.</p>
+                                        <p><strong>Rifle: </strong>Inflict various conditions and unleash powerful attacks against a single target.</p><br>
 
-                                    <h5>Main Hand</h5>
-                                    <p><strong>Axe: </strong>Can quickly build up adrenaline and can deliver powerful high damage attacks.</p><br>
-                                    <p><strong>Mace: </strong>Mainly a defensive weapon, the mace can also leave enemies susceptible to further blows.</p><br>
-                                    <p><strong>Sword: </strong>Quick and mobile, with many opportunities to cause bleeding.</p><br>
+                                        <h5>Main Hand</h5>
+                                        <p><strong>Axe: </strong>Can quickly build up adrenaline and can deliver powerful high damage attacks.</p><br>
+                                        <p><strong>Mace: </strong>Mainly a defensive weapon, the mace can also leave enemies susceptible to further blows.</p><br>
+                                        <p><strong>Sword: </strong>Quick and mobile, with many opportunities to cause bleeding.</p><br>
 
 
-                                    <h5>Off Hand: </h5>
-                                    <p><strong>Aze: </strong>Can be used to strike with both weapons simultaneously or storm with a whirling attack.</p>
-                                    <p><strong>Mace: </strong>Used to crush the armor of a foe or stun foes in front by slamming the mace on the ground.</p>
-                                    <p><strong>Shield: </strong>Used to bash foes or block incoming attacks.</p>
-                                    <p><strong>Sword: </strong>Can be thrown at enemies or to block and retaliate.</p>
-                                    <p><strong>Torch: </strong>Reckless weapon of destruction, can even light warriors themselves ablaze to become mobile fire fields. (Berserker specialization only)</p><br>
-                                    <p><strong>Warhorn: </strong>Grants boons to allies, facilitating mobility.</p>
+                                        <h5>Off Hand: </h5>
+                                        <p><strong>Aze: </strong>Can be used to strike with both weapons simultaneously or storm with a whirling attack.</p>
+                                        <p><strong>Mace: </strong>Used to crush the armor of a foe or stun foes in front by slamming the mace on the ground.</p>
+                                        <p><strong>Shield: </strong>Used to bash foes or block incoming attacks.</p>
+                                        <p><strong>Sword: </strong>Can be thrown at enemies or to block and retaliate.</p>
+                                        <p><strong>Torch: </strong>Reckless weapon of destruction, can even light warriors themselves ablaze to become mobile fire fields. (Berserker specialization only)</p><br>
+                                        <p><strong>Warhorn: </strong>Grants boons to allies, facilitating mobility.</p>
 
-                                    <h5>Aquatic</h5>
-                                    <p><strong>Harpoon Gun: </strong>Long range mechanical weapon which inflicts conditions.</p>
-                                    <p><strong>Spear: </strong>Close range martial weapon with several multi-hit attacks.</p>
-                                </div>
-                            </li>
-                        </ul>
+                                        <h5>Aquatic</h5>
+                                        <p><strong>Harpoon Gun: </strong>Long range mechanical weapon which inflicts conditions.</p>
+                                        <p><strong>Spear: </strong>Close range martial weapon with several multi-hit attacks.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<div class="sectionTitle">
-    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s"> Expansion </h1>
+<div class="sectionTitle" >
+    <h1 class="pageTitle wow fadeInUp" data-wow-duration="2s" id="fourth" data-magellan-target="fourth"> Expansion </h1>
 </div>
+<ul class="horizontal menu" data-magellan>
+    <li><a href="#first" class="button">To Game</a></li>
+    <li><a href="#second" class="button">To Races</a></li>
+    <li><a href="#third" class="button">To Professions</a></li>
+    <li class="button"> Expansion </li>
+</ul>
+
+
 
 <div class="flex-video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rRRfS9Gp0xQ?autohide=1&controls=0&modestbranding=1&vq=hd1080"  frameborder="0" allowfullscreen></iframe>
@@ -662,7 +709,7 @@
     })
 </script>
 
-<div class="reveal revealG" id="exampleModal4" data-reveal>
+<div class="reveal revealG" id="exampleModal4" data-reveal data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
     <div class="flex-video">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/tcp3U-RlbGw?autohide=1&controls=1&modestbranding=1&vq=hd1080" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -671,7 +718,7 @@
     </button>
 </div>
 
-<div class="reveal revealG" id="exampleModal5" data-reveal>
+<div class="reveal revealG" id="exampleModal5" data-reveal data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
     <div class="flex-video">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/cv8l-_uyXas?autohide=1&controls=1&modestbranding=1&vq=hd1080" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -680,7 +727,7 @@
     </button>
 </div>
 
-<div class="reveal revealG" id="exampleModal6" data-reveal>
+<div class="reveal revealG" id="exampleModal6" data-reveal data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
     <div class="flex-video">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/1BKNUyS1X_8?autohide=1&controls=1&modestbranding=1&vq=hd1080" frameborder="0" allowfullscreen></iframe>
     </div>

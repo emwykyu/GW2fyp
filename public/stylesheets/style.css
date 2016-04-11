@@ -30,12 +30,22 @@ html{
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 
 /*media query for SMALL SCREEN SIZES*/
 @media screen and (max-width: 39.9375em) {
     html{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    p{
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -319,6 +329,10 @@ h1.pageTitle{
     h1.pageTitle{
         font-size: 5em;
     }
+
+    .sectionTitle{
+        height:200px;
+    }
 }
 
 
@@ -327,8 +341,20 @@ h1.pageTitle{
     h1.pageTitle{
         font-size: 3em;
     }
+
+    .sectionTitle{
+        height:100px;
+    }
 }
 
+.horizontal.menu{
+    z-index:1000;
+    background: linear-gradient(rgba(220, 36, 31, 0.4), rgba(220, 36, 31, 0.4)),url("images/mirror.jpg") no-repeat center center fixed;
+}
+
+.horizontal.menu a.button{
+    background: transparent;
+}
 
 /****************************************
 ===============  THEGAME  ===============
@@ -345,7 +371,6 @@ h1.pageTitle{
 
 .features p {
     margin-bottom: 30px;
-
 }
 
 /****************************************
@@ -366,6 +391,10 @@ h1.pageTitle{
 .raceTabs{
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url("images/RaceArt.jpg") no-repeat center center fixed;
     margin-bottom: 55px;
+}
+
+.sectionTyria{
+    min-height: 1000px;
 }
 
 .sectionTyria h2{
@@ -408,8 +437,7 @@ h1.pageTitle{
 *****************************************/
 
 .prof{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     text-align: center;
 }
 
@@ -452,6 +480,20 @@ h1.pageTitle{
     font-family: Raleway;
     color: #330033;
 }
+
+select.profsDropdown{
+    width: 200px;
+    position: relative;
+    float: left;
+    margin-left: 5%;
+}
+
+select.profsDropdown>option{
+
+}
+
+
+
 /*************************************
 ============  CARD FLIP  =============
 **************************************/
