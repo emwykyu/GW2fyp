@@ -180,7 +180,7 @@
     </div>
 
     <select class="profsDropdown" ng-model="profs">
-            <option value="ele">Elementalist</option>
+            <option value="ele" selected>Elementalist</option>
             <option value="necro">Necromancer</option>
             <option value="mesmer">mesmer</option>
             <option value="engi">Engineer</option>
@@ -193,7 +193,7 @@
 
     <div ng-switch="profs">
         <div ng-switch-default>
-            <!--<img src="/stylesheets/images/profs.jpg">-->
+            <img class="profDefault" src="/stylesheets/images/allprofs.png">
         </div>
 
         <div class="row" ng-switch-when="ele">
