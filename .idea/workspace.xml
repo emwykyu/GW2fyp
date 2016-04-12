@@ -141,11 +141,11 @@
         <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/routes/myGW2.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/myGW2.handlebars" />
         <option value="$PROJECT_DIR$/views/register.handlebars" />
         <option value="$PROJECT_DIR$/views/login.handlebars" />
         <option value="$PROJECT_DIR$/views/layouts/layout.handlebars" />
         <option value="$PROJECT_DIR$/views/index.handlebars" />
+        <option value="$PROJECT_DIR$/views/myGW2.handlebars" />
         <option value="$PROJECT_DIR$/views/baseGame.handlebars" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
       </list>
@@ -160,6 +160,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
+    <option name="width" value="1379" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -400,6 +401,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1379" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
