@@ -5,7 +5,7 @@
 <head>
 </head>
 <body ng-app="">
-
+<a href="/" class="button backhome">home</a>
 
 <div>
     <!--<img src="stylesheets/images/gw2logo.gif">-->
@@ -178,7 +178,6 @@
         <p class="tyriaDesc"> There are 8 Professions in the base game of GW2, each with skills, traits and equipment to allow a player to customise and tweak thier character to the fullest. Professions are not limited by
             traditional archetypes such as Healer, Tank and DPS, rather, each is able to damage, control and support during combat.</p><br>
     </div>
-
     <select class="profsDropdown" ng-model="profs">
             <option value="ele" selected>Elementalist</option>
             <option value="necro">Necromancer</option>
@@ -190,12 +189,10 @@
             <option value="guard">Guardian</option>
             <option value="warr">Warrior</option>
     </select>
-
     <div ng-switch="profs">
         <div ng-switch-default>
             <img class="profDefault" src="/stylesheets/images/allprofs.png">
         </div>
-
         <div class="row" ng-switch-when="ele">
             <div class="row wow fadeIn prof" data-wow-duration="2s" data-wow-delay="0s">
                 <h2 class="profTitle">Elementalist</h2>
@@ -211,7 +208,7 @@
                                     <div id="panel13a" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel13a-heading">
                                         <h5>Armour type: </h5> <p>Light </p><br>
                                         <h5>Elite Specialization: </h5> <p>Tempest</p><br>
-                                        <h5>Elite Specialisation weapon: </h5> <p>Warhorn </p><br>
+                                        <h5>Elite Specialisation weapon: </h5> <p>Warhorn</p><br>
                                     </div>
                                 </li>
                                 <li class="accordion-navigation">

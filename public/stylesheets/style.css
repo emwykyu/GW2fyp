@@ -110,6 +110,11 @@ i{
     text-align: center;
 }
 
+.backhome{
+    position: relative;
+    z-index: 1000;
+
+}
 
 /*******************************************
 ================  HERO IMG  ================
@@ -384,19 +389,7 @@ h1.pageTitle{
 }
 
 /****************************************
-=============  THUMBNAILS  =============
-*****************************************/
-/*.thumbnail{*/
-    /*-webkit-border-radius:50px;*/
-    /*-moz-border-radius:50px;*/
-    /*border-radius:50px;*/
-/*}*/
-
-
-
-
-/****************************************
-=============  RACESTYRIA  =============
+=============  RACES =============
 *****************************************/
 .raceTabs{
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url("images/RaceArt.jpg") no-repeat center center fixed;
@@ -440,6 +433,69 @@ h1.pageTitle{
     }
 }
 
+
+/*************************************
+============  CARD FLIP  =============
+**************************************/
+
+.flipContainer {
+    height: 40em;
+    width: 25em;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    margin: 0 auto;
+}
+.card {
+    height: 40em;
+    width: 25em;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    display: block;
+    height: 90%;
+    width: 90%;
+    /*line-height: 260px;*/
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.card .back {
+    background: #fff;
+    color: #000;
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
 
 
 /****************************************
@@ -509,69 +565,6 @@ img.profDefault {
     left: 80px;
 }
 
-
-/*************************************
-============  CARD FLIP  =============
-**************************************/
-
-.flipContainer {
-    height: 40em;
-    width: 25em;
-    position: relative;
-    -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-    -o-perspective: 800px;
-    perspective: 800px;
-    margin: 0 auto;
-}
-.card {
-    height: 40em;
-    width: 25em;
-    position: absolute;
-    -webkit-transition: -webkit-transform 1s;
-    -moz-transition: -moz-transform 1s;
-    -o-transition: -o-transform 1s;
-    transition: transform 1s;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 50%;
-}
-.card div {
-    display: block;
-    height: 90%;
-    width: 90%;
-    /*line-height: 260px;*/
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 140px;
-    position: absolute;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-
-.card .back {
-    background: #fff;
-    color: #000;
-    font-family: Raleway, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-}
-.card.flipped {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-}
 /**************************************************************************
 ==============================  API  =====================================
 ***************************************************************************/
