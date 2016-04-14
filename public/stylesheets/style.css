@@ -111,9 +111,12 @@ i{
 }
 
 .backhome{
-    position: relative;
+    position: absolute;
     z-index: 1000;
-
+    margin: 20px;
+    background: transparent;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 20px;
 }
 
 /*******************************************
@@ -668,6 +671,11 @@ h1.apiTitle{
         border-radius: 2px;
         margin: 5px;
         display: table;
+    }
+
+    .apiTabs{
+        height: 500px;
+
     }
 }
 

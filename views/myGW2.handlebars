@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="ApiHome">
-    <a href="/" class="button">home</a>
+    <a href="/" class="button backhome">home</a>
     <h1 class = "apiTitle"> My GW2</h1>
     <div class="row apiTabs">
         <ul class="tabs" data-tabs id="example-tabs">
@@ -94,8 +94,8 @@
             }
             var ep = gw2Api.endpoints.characters.url, params = ep.getParameters();
             params.lang = 'en';     //set language
-            params.page = 0;        //set page; in this case, a page refers to a character. page = 0 means all characters
-            params.pageSize = 0;    //size of page determines how many pages (i.e. characters) show up.
+            params.page = 2;        //set page; in this case, a page refers to a character. page = 0 means all characters
+            params.pageSize = 1;    //size of page determines how many pages (i.e. characters) show up.
             params.token = '{{user.apiKey}}'; //API key
             ep.get(params).then(function(response){
                 var data, headers;
