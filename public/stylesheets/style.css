@@ -98,7 +98,6 @@ p{
     overflow-y: hidden;
 }
 
-
 /**************************************************************************
 ========================  REUSABLE CONTENT  ===============================
 ***************************************************************************/
@@ -588,17 +587,11 @@ img.profDefault {
     position: relative;
     height: 70%;
     width: 50%;
-    top: 15%;
-    left: 25%;
-    right: 25%;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
 .apiRow{
     position: absolute;
-    top: 5%;
-    left: 10%;
-    right: 30%;
     width: auto;
     display: block;
 }
@@ -608,12 +601,16 @@ ul>.card{
     height: 70px;
     width: 250px;
     background-color: #fff;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
     border-radius: 2px;
     margin: 5px;
     display: table;
 }
 
+ul>.cardTitle{
+    font-size: 50px;
+    color: #ffa41a;
+}
 
 .card>.cardText{
     font-family: Raleway, Arial, sans-serif;
@@ -622,37 +619,21 @@ ul>.card{
     text-align: left;
     vertical-align: middle;
 }
-
-/*!*media query for MEDIUM SCREEN SIZES*!*/
-/*@media screen and (min-width: 40em) and (max-width: 63.9375em) {*/
-
-/*}*/
-
-
-
 .apiTabs{
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background: #fff;
     margin-bottom: 55px;
     width: auto;
-    left: 20%;
-    right: 20%;
     height: 800px;
 }
 
-.apiContainer {
-    height: 40em;
-    width: 25em;
-    position: relative;
-    -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-    -o-perspective: 800px;
-    perspective: 800px;
-    margin: 0 auto;
+.div[data-tabs-content]{
+
+;
 }
+
 
 h1.apiTitle{
     position: relative;
-    /*top: 25%;*/
     text-align: center;
     font-size: 6em;
     font-family: Raleway, Arial, sans-serif;
@@ -675,7 +656,6 @@ h1.apiTitle{
 
     .apiTabs{
         height: 500px;
-
     }
 }
 

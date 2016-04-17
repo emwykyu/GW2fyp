@@ -11,15 +11,14 @@
     <div class="row apiTabs">
         <ul class="tabs" data-tabs id="example-tabs">
             <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Account</a></li>
-            <li class="tabs-title"><a href="#panel2">Character</a></li>
+            <li class="tabs-title"><a href="#panel2">Characters</a></li>
         </ul>
-        <div class="flipContainer" data-tabs-content="example-tabs">
+        <div class= data-tabs-content="example-tabs">
             <div class="tabs-panel is-active" id="panel1">
-                <div class="row apiRow">
+                <div class="row">
                     <div class="large-3 columns">
-                        <div class="row">
                             <ul>
-                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.1s">
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card cardTitle" data-wow-duration="1s" data-wow-delay="0.1s">
                                     <p class="cardText" id="name"></p>
                                 </div>
                                 <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.3s">
@@ -40,27 +39,45 @@
                                 <div>
                                 </div>
                             </ul>
+                    </div>
+                    <div class="large-3 columns">
+                        <div class="row">
+                            <ul>
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card cardTitle" data-wow-duration="1s" data-wow-delay="0.1s">
+                                    <p class="cardText" id="acc1"></p>
+                                </div>
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.3s">
+                                    <p class="cardText" id="acc2"></p>
+                                </div>
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.4s">
+                                    <p class="cardText" id="acc3"></p>
+                                </div>
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.5s">
+                                    <p class="cardText" id="acc4"></p>
+                                </div>
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.6s">
+                                    <p class="cardText" id="acc5"></p>
+                                </div>
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.7s">
+                                    <p class="cardText" id="acc6"></p>
+                                </div>
+                                <div>
+                                </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tabs-panel" id="panel2">
-                <div class="button" onclick="incadd()"></div>
                 <div class="row apiRow">
                     <div class="large-3 columns">
                         <div class="row">
                             <ul>
-                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.1s">
+                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card cardTitle" data-wow-duration="1s" data-wow-delay="0.1s">
                                     <p class="cardText" id="apiName"></p>
                                 </div>
                                 <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.2s">
                                     <p class="cardText" id="apiGen"></p>
-                                </div>
-                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.3s">
-                                    <p class="cardText" id="apiRace"></p>
-                                </div>
-                                <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.4s">
-                                    <p class="cardText" id="apiProf"></p>
                                 </div>
                                 <div class="wow fadeInUp large-12 medium-12 small-12 columns card" data-wow-duration="1s" data-wow-delay="0.5s">
                                     <p class="cardText" id="apiLev"></p>
@@ -79,22 +96,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="button" onclick="incsub()"></div>
             </div>
         </div>
         <script>
-            var inc =0;
-            function incadd(){
-                inc = inc + 1;
-                $('#thisdiv').load(document.URL +  'tabs-panel');
-            }
-            function incsub(){
-                inc = inc - 1;
-                $('#thisdiv').load(document.URL +  'tabs-panel');
-            }
             var ep = gw2Api.endpoints.characters.url, params = ep.getParameters();
             params.lang = 'en';     //set language
-            params.page = 2;        //set page; in this case, a page refers to a character. page = 0 means all characters
+            params.page = 0;        //set page; in this case, a page refers to a character. page = 0 means all characters
             params.pageSize = 1;    //size of page determines how many pages (i.e. characters) show up.
             params.token = '{{user.apiKey}}'; //API key
             ep.get(params).then(function(response){
@@ -103,15 +110,18 @@
                 headers = response.headers;
                 var string = data[0].created;
                 var length = 10;
+
+                console.log(data[0]);
+
                 var trimmedString = string.substring(0, length);
                 document.getElementById('apiName').innerHTML = data[0].name;
-                document.getElementById('apiGen').innerHTML =  data[0].gender;
-                document.getElementById('apiRace').innerHTML = data[0].race;
-                document.getElementById('apiProf').innerHTML = data[0].profession;
+                document.getElementById('apiGen').innerHTML =  data[0].gender + " " + data[0].race + " " + data[0].profession;
                 document.getElementById('apiLev').innerHTML =  "level " + data[0].level;
                 document.getElementById('apiAge').innerHTML = parseInt((data[0].age/3600), 10) + " hours played";
                 document.getElementById('apiCreate').innerHTML = "born " + trimmedString;
                 document.getElementById('apiDeath').innerHTML =  "fainted " + data[0].deaths + " times";
+
+
                 $('apiOut').jPut({
                     ajax_url:ep,//ajax:Specifies the URL to send the request to. Default is the current page
                     done:function(e){
@@ -125,7 +135,7 @@
             var epS = gw2Api.endpoints.account.url,
                     paramsS = epS.getParameters();
             params.lang = 'en';
-            params.page = 1;
+            params.page = 0;
             params.pageSize = 0;
             params.token = '{{user.apiKey}}';
             epS.get(params).then(function(response){
@@ -142,6 +152,30 @@
                 document.getElementById('fractalLevel').innerHTML = "Fractal Level: " + data.fractal_level;
                 document.getElementById('wvwrank').innerHTML = "WvW level: " + data.wvw_rank;
             });
+
+            var epT = gw2Api.endpoints.account.wallet.url,
+                    params = ep.getParameters();
+            params.lang = 'en';
+            params.page = 0;
+            params.pageSize = 1;
+            params.token = '{{user.apiKey}}';
+            epT.get(params).then(function(response){
+                var data, headers;
+                data = response.data;
+                headers = response.headers;
+
+                console.log(data);
+
+                document.getElementById('acc1').innerHTML = "Wallet";
+                document.getElementById('acc2').innerHTML = "Gold: " + data[0].value;
+                document.getElementById('acc3').innerHTML = "Karma: " + data[1].value;
+                document.getElementById('acc4').innerHTML = "Laurels: " + data[2].value;
+                document.getElementById('acc5').innerHTML = "Spirit shards: " + data[15].value;
+                document.getElementById('acc6').innerHTML = "Badges of Honor: " + data[9].value;
+
+
+            });
+
         </script>
         <script src="/jquery/dist/jquery.min.js"></script>
         <script src="/foundation-sites/dist/foundation.min.js"></script>

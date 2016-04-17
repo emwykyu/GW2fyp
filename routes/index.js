@@ -6,7 +6,7 @@ var router = express.Router();
 
 // Get Homepage
 router.get('/', ensureAuthenticated, function(req, res){
-    res.render('index');
+    res.render('index', { title: 'The GW2 LeyLine'});
 });
 
 function ensureAuthenticated(req, res, next){
