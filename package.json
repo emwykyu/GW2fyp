@@ -1,12 +1,12 @@
 {
-  "name": "guildWars2FYP",
+  "name": "GuildWars2FYP",
   "version": "1.0.0",
   "description": "Guild Wars 2 site",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brad Traversy",
+  "author": "Muhammad Qasim",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "*",
