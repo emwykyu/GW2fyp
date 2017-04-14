@@ -1,0 +1,29 @@
+{
+  "name": "GuildWars2FYP",
+  "description": "Guild Wars 2 site",
+  "main": "app.js",
+  "authors": [
+    "Muhammad Qasim"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/emwykyu/GW2fyp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dlr.gw2Api": "^0.5.0",
+    "foundation-sites": "~6.1.0",
+    "jquery": "^2.2.2",
+    "jquery-ui": "^1.12.1",
+    "Ionicons": "ionicons#^2.0.1",
+    "motion-ui": "^1.2.2",
+    "modernizr": "^3.3.1",
+    "what-input": "^4.1.1",
+    "wow": "wowjs#^1.1.2"
+  }
+}

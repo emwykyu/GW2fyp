@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GW2fyp.iml" filepath="$PROJECT_DIR$/.idea/GW2fyp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/loginapp-master.iml" filepath="$PROJECT_DIR$/.idea/loginapp-master.iml" />
+      <module fileurl="file://C:\Users\Emwyk\Documents\GitHub\GW2fyp\.idea\loginapp-master.iml" filepath="C:\Users\Emwyk\Documents\GitHub\GW2fyp\.idea\loginapp-master.iml" />
     </modules>
   </component>
 </project>

@@ -10,11 +10,11 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
+//var mongo = require('mongodb'); //disabled for heroku compatibility
+//var mongoose = require('mongoose'); //disabled for heroku compatibility
 
-mongoose.connect('mongodb://localhost/GW2fyp');
-var db = mongoose.connection;
+//mongoose.connect('mongodb://localhost/GW2fyp'); //disabled for heroku compatibility
+//var db = mongoose.connection; //disabled for heroku compatibility
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

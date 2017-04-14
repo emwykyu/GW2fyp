@@ -13,13 +13,13 @@
     "body-parser": "*",
     "connect-flash": "*",
     "cookie-parser": "^1.4.1",
-    "express": "*",
+    "express": "^4.15.2",
     "express-handlebars": "*",
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
     "mongodb": "*",
-    "mongoose": "*",
+    "mongoose": "^4.9.4",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*"
@@ -28,5 +28,17 @@
     "mocha": "^2.4.5",
     "should": "^8.3.1",
     "supertest": "^1.2.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emwykyu/GW2fyp.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/emwykyu/GW2fyp/issues"
+  },
+  "homepage": "https://github.com/emwykyu/GW2fyp#readme"
 }
